@@ -23,6 +23,7 @@ import ParallaxText from '@/components/Parallax';
 import { useState } from 'react';
 
 import localFont from '@next/font/local';
+import VideoPlayer from '@/components/VideoPlayer';
 
 const tan = localFont({
   src: [
@@ -125,11 +126,7 @@ export default function Home() {
                   <div className='hero__card__content'>
                     <div>
                       <h5 className={tan.className}>Agent Reespect</h5>
-                      {/* <p>Main Character</p> */}
                     </div>
-                    {/* <div className='soon'>
-                      <p>Coming Soon</p>
-                    </div> */}
                   </div>
                 </div>
                 <div className='hero__card hero__card__three'>
@@ -160,10 +157,7 @@ export default function Home() {
                 </div>
 
                 <div className='join'>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Sapien at sed sit
-                    amet.
-                  </p>
+                  <p>It’s storytelling, community and social innovation.</p>
 
                   <a
                     href='https://discord.com/invite/C9Hesz7uUn'
@@ -239,11 +233,11 @@ export default function Home() {
           </header>
 
           <div className='video'>
-            <iframe
-              // src='https://www.youtube.com/embed/1ZQ2Q2Z3Z4'
-              title='YouTube video player'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            ></iframe>
+            <VideoPlayer
+              source={
+                'https://res.cloudinary.com/favourcodes/video/upload/v1674145140/samples/Untitled_1_zxswit.mp4'
+              }
+            />
           </div>
         </div>
 

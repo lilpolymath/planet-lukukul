@@ -16,11 +16,6 @@ interface ParallaxProps {
 const ParallaxText = ({ children, baseVelocity = 100 }: ParallaxProps) => {
   const baseX = useMotionValue(0);
 
-  /**
-   * This is a magic wrapping for the length of the text - you
-   * have to replace for wrapping that works for you or dynamically
-   * calculate
-   */
   const x = useTransform(baseX, (v) => `${wrap(10, -10, v)}%`);
 
   const directionFactor = useRef<number>(1);
