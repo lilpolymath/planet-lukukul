@@ -220,7 +220,7 @@ export default function Home() {
                 most trusted agents to find this being and free it.
               </p>
               <p>
-                Agent Respect knows it won't be easy, but this is not the first
+                Agent Reespect knows it won't be easy, but this is not the first
                 time Planet Lukukul has had enemies and this is not the first
                 time she has had to fight. Her only mission right now is to free
                 The Great Silence.
@@ -245,7 +245,7 @@ export default function Home() {
                 fontFamily: tan.style.fontFamily,
               }}
             >
-              The Great Silence
+              Great Silence
             </h2>
           </header>
 
