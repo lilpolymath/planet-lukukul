@@ -296,6 +296,14 @@ export default function Home() {
           <div className='team__content'>
             {team.map((item, index) => (
               <div className='team__card' key={index}>
+                <a
+                  href={item.link}
+                  className='team__card__link'
+                  target='_blank'
+                  rel='noopener nofollow noreferrer'
+                >
+                  {' '}
+                </a>
                 <img
                   src={item.img.src}
                   className='team__card__img'
