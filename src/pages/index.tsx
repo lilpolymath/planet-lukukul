@@ -118,6 +118,11 @@ export default function Home() {
                   <div className='hero__img__cover '>
                     <img src={astro.src} className='hero__img' />
                   </div>
+                  <div className='hero__card__content'>
+                    <div>
+                      <h5 className={tan.className}>Francis Ocean</h5>
+                    </div>
+                  </div>
                 </div>
                 <div className='hero__card hero__card__two'>
                   <div className='hero__img__cover'>
@@ -132,6 +137,11 @@ export default function Home() {
                 <div className='hero__card hero__card__three'>
                   <div className='hero__img__cover'>
                     <img src={nina.src} className='hero__img' />
+                  </div>
+                  <div className='hero__card__content'>
+                    <div>
+                      <h5 className={tan.className}>Kate 674</h5>
+                    </div>
                   </div>
                 </div>
               </div>
