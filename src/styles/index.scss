@@ -107,7 +107,7 @@ nav {
   }
 
   &__card {
-    padding: 20px;
+    padding: 12px;
     min-width: 170px;
     background: #ffffff;
     border-radius: 14.2879px;
@@ -178,6 +178,8 @@ nav {
         font-size: 16px;
         line-height: 27px;
         color: #15082d;
+        text-align: center;
+        width: 100%;
 
         @media screen and (max-width: 600px) {
           font-size: 11.9261px;
@@ -300,7 +302,7 @@ nav {
 }
 
 .world {
-  display: none;
+  margin: 100px 0;
   min-height: 100vh;
   background: #040016;
 
@@ -330,15 +332,31 @@ nav {
   }
 
   &__story {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     color: #ffffff;
+    place-items: center;
+    padding-top: 48px;
+    padding: 100px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
 
     h2 {
       font-size: 72px;
       line-height: 88px;
       margin-bottom: 24px;
+    }
+
+    p {
+      max-width: 500px;
+      font-size: 18px;
+      line-height: 24px;
+
+      + p {
+        margin-top: 24px;
+      }
     }
   }
 }
@@ -349,7 +367,7 @@ nav {
     overflow: hidden;
     max-width: 1440px;
     margin: auto;
-    min-height: 1024px;
+    padding: 120px 0 80px;
 
     display: flex;
     flex-direction: column;
@@ -394,7 +412,7 @@ nav {
 
 .parallax {
   overflow: hidden;
-  margin: 0;
+  margin: 80px 0 0;
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
@@ -548,17 +566,23 @@ nav {
   }
 
   &__header {
-    text-align: center;
     color: #110626;
 
     .desc {
       font-size: 24px;
       line-height: 32px;
+
+      + .desc {
+        margin-top: 24px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      text-align: center;
     }
   }
 
   &__content {
-    // min-height: 1024px;
     background-color: #9b66ff;
 
     .title {
