@@ -7,7 +7,7 @@ import gibson from '../assets/gibson.jpg';
 import ayonete from '../assets/ayonete.jpg';
 import nativemind from '../assets/nativemind.jpg';
 import reespect from '../assets/reespect.jpg';
-import favour from '../assets/favour.jpg';
+import favour from '../assets/favour.jpeg';
 import cynthia from '../assets/cyn.jpg';
 import merch from '../assets/merch.svg';
 import metaverse from '../assets/metaverse.svg';

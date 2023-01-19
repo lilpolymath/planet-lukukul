@@ -76,8 +76,6 @@ const VideoPlayer = ({ source }) => {
           preload='metadata'
         >
           <source src={source} type='video/mp4' />
-          <source src={ogg} type='video/ogg' />
-          <source src={webm} type='video/webm' />
         </video>
         <div data-state='play' id='video-controls'>
           <button id='playpause'>{play ? <Pause /> : <Play />}</button>

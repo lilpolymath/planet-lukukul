@@ -77,8 +77,12 @@ nav {
     margin-top: 56px;
     margin-bottom: 96px;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 500px) {
       transform: translate(-30%, 0);
+    }
+
+    @media screen and (max-width: 600px) {
+      transform: translate(-5%, 0);
     }
   }
 
