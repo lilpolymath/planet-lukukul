@@ -22,7 +22,27 @@ import { roadmap, team, why } from '@/assets/data';
 import ParallaxText from '@/components/Parallax';
 import { useState } from 'react';
 
-const work_sans = Work_Sans({ subsets: ['latin'] });
+import localFont from '@next/font/local';
+
+const tan = localFont({
+  src: [
+    {
+      path: '../assets/fonts/Tan.otf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+});
+
+const basicsans = localFont({
+  src: [
+    {
+      path: '../assets/fonts/basicsanssf.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+});
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +66,12 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className='hero__container'>
+      <div
+        className='hero__container'
+        style={{
+          fontFamily: basicsans.style.fontFamily,
+        }}
+      >
         <nav>
           <header className='container'>
             <h1>
@@ -99,12 +124,12 @@ export default function Home() {
                   </div>
                   <div className='hero__card__content'>
                     <div>
-                      <h5>Agent X</h5>
-                      <p>Main Character</p>
+                      <h5 className={tan.className}>Agent Reespect</h5>
+                      {/* <p>Main Character</p> */}
                     </div>
-                    <div className='soon'>
+                    {/* <div className='soon'>
                       <p>Coming Soon</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className='hero__card hero__card__three'>
@@ -114,7 +139,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <h1>
+              <h1 className={tan.className}>
                 Escape into a new <br /> world
               </h1>
 
@@ -129,7 +154,7 @@ export default function Home() {
                     <img src={six.src} alt='' />
                   </div>
                   <p>
-                    <span>1200 people</span> in our community.
+                    <span>218 people</span> in our community.
                   </p>
                   <p>Join us today</p>
                 </div>
@@ -142,6 +167,8 @@ export default function Home() {
 
                   <a
                     href='https://discord.com/invite/C9Hesz7uUn'
+                    target={'_blank'}
+                    rel='noreferrer'
                     className='join-btn'
                   >
                     Join the Community
@@ -158,7 +185,12 @@ export default function Home() {
         </section>
       </div>
 
-      <section className='world'>
+      <section
+        className='world'
+        style={{
+          fontFamily: basicsans.style.fontFamily,
+        }}
+      >
         <div className='container'>
           <div
             className='world__view'
@@ -170,7 +202,7 @@ export default function Home() {
             {/* <img src={world.src} alt='' /> */}
           </div>
           <div className='world__story'>
-            <h2>Chapter 1</h2>
+            <h2 className={tan.className}>Chapter 1</h2>
             <p>
               On Planet Lukukul, unknown villains have stolen everyone's
               happiness, the people have lost their color and a world that used
@@ -187,11 +219,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='video__container section'>
+      <section
+        className='video__container section'
+        style={{
+          fontFamily: basicsans.style.fontFamily,
+        }}
+      >
         <div className='container'>
           <header className='video__header'>
             <p className='desc'>You should watch this video</p>
-            <h2 className='title'>The Great Silence</h2>
+            <h2
+              className='title'
+              style={{
+                fontFamily: tan.style.fontFamily,
+              }}
+            >
+              The Great Silence
+            </h2>
           </header>
 
           <div className='video'>
@@ -205,24 +249,35 @@ export default function Home() {
 
         <ParallaxText baseVelocity={-5}>
           <div className='video__join-btn'>
-            <span>Join the community</span> <img src={planet.src} alt='' />{' '}
+            <span className={tan.className}>Join the community</span>{' '}
+            <img src={planet.src} alt='' />{' '}
           </div>
         </ParallaxText>
       </section>
 
-      <section className='roadmap section'>
-        <h2>Roadmap</h2>
+      <section
+        className='roadmap section'
+        style={{
+          fontFamily: basicsans.style.fontFamily,
+        }}
+      >
+        <h2 className={tan.className}>Roadmap</h2>
 
         <div className='roadmap__timeline desktop'>
           {roadmap.map((item, index) => (
             <div className='roadmap__card' key={index}>
-              <div className='roadmap__card__timeline'>
-                <p>04</p>
-                <p>2022</p>
+              <div
+                className='roadmap__card__timeline'
+                style={{
+                  fontFamily: tan.style.fontFamily,
+                }}
+              >
+                <p>{item.timeline}</p>
+                <p>2023</p>
               </div>
               <img src={item.icon.src} alt={item.title} />
               <div className='roadmap__card__content'>
-                <h4>{item.title}</h4>
+                <h4 className={tan.className}>{item.title}</h4>
                 <p>{item.description}</p>
               </div>
             </div>
@@ -232,12 +287,12 @@ export default function Home() {
         <div className='roadmap__timeline mobile'>
           <div className='roadmap__card'>
             <div className='roadmap__card__timeline'>
-              <p>04</p>
-              <p>2022</p>
+              <p className={tan.className}>04</p>
+              <p className={tan.className}>2022</p>
             </div>
             <img src={currentItem.icon.src} alt={currentItem.title} />
             <div className='roadmap__card__content'>
-              <h4>{currentItem.title}</h4>
+              <h4 className={tan.className}>{currentItem.title}</h4>
               <p>{currentItem.description}</p>
             </div>
           </div>
@@ -255,30 +310,50 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='why section'>
+      <section
+        className='why section'
+        style={{
+          fontFamily: basicsans.style.fontFamily,
+        }}
+      >
         <div className='container'>
           <header className='why__header'>
-            <h3 className='title'>Why we are doing this</h3>
+            <h3
+              className='title'
+              style={{
+                fontFamily: tan.style.fontFamily,
+              }}
+            >
+              Why we are doing this
+            </h3>
             <p className='desc'>
               Our mission is to create a safe haven for non-male
               African/African-Descendant creatives. we do this by prioritising
-              artist wellness, and by escalating diverse creative forms. we blur
-              the lines in expertise to create well-rounded projects that bring
-              the web3 philosophy to life, and continue making our intention
-              kind, empathetic and transparent so that everything we build
-              stands the test of time.
+              artist wellness, and by escalating diverse creative forms.
+            </p>
+            <p className='desc'>
+              We blur the lines in expertise to create well-rounded projects
+              that bring the web3 philosophy to life, and continue making our
+              intention kind, empathetic and transparent so that everything we
+              build stands the test of time.
             </p>
           </header>
 
           <div className='why__content'>
-            <h3 className='title'>What you’ll get</h3>
+            <h3
+              className='title'
+              style={{
+                fontFamily: tan.style.fontFamily,
+              }}
+            >
+              What you’ll get
+            </h3>
             <div className='why__cards'>
               {why.map((item, index) => (
                 <div className='why__card' key={index}>
                   <img src={item.icon.src} alt={item.title} />
                   <div className='why__card__content'>
                     <h5>{item.title}</h5>
-                    <p>Coming in {item.timeline}</p>
                   </div>
                 </div>
               ))}
@@ -287,10 +362,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='team'>
+      <section
+        className='team'
+        style={{
+          fontFamily: basicsans.style.fontFamily,
+        }}
+      >
         <div className='container'>
           <header className='team__header'>
-            <h3 className='title'>Team</h3>
+            <h3
+              className='title'
+              style={{
+                fontFamily: tan.style.fontFamily,
+              }}
+            >
+              Team
+            </h3>
           </header>
 
           <div className='team__content'>
@@ -310,7 +397,7 @@ export default function Home() {
                   alt={item.name}
                 />
                 <div className='team__card__content'>
-                  <h5>{item.role}</h5>
+                  <h5 className={tan.className}>{item.role}</h5>
                   <p>{item.name}</p>
                 </div>
               </div>
@@ -319,15 +406,19 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
+      <footer
+        style={{
+          fontFamily: basicsans.style.fontFamily,
+        }}
+      >
         <div className='container'>
           <header className='footer__header'>
             <img src={sealed_mouth.src} alt='' />
-            <h2>Escape to a new world.</h2>
+            <h2 className={tan.className}>Escape to a new world.</h2>
             <a
-              target='_blank'
-              rel='noopener nofollow'
-              href='#'
+              href='https://discord.com/invite/C9Hesz7uUn'
+              target={'_blank'}
+              rel='noreferrer'
               className='join-btn'
             >
               Join the Community

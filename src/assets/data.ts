@@ -19,6 +19,7 @@ import collectibles from '../assets/collectibles.svg';
 export const roadmap = [
   {
     title: 'The Great Silence',
+    timeline: 'Q1',
     description:
       ' An excerpt of one of agent Reespect’s early missions, made with music, animation and storytelling.',
     icon: sealed_mouth,
@@ -26,6 +27,7 @@ export const roadmap = [
 
   {
     title: 'Character Introduction',
+    timeline: 'Q1',
     description:
       'Introduce the community to the planet’s early characters and their backstory.',
     icon: masked_face,
@@ -33,6 +35,7 @@ export const roadmap = [
 
   {
     title: 'Cross-Chain Collabs',
+    timeline: 'Q1',
     description:
       'Collaboration galore with creatives/creative communities on other blockchains.',
     icon: handshake,
@@ -40,12 +43,14 @@ export const roadmap = [
 
   {
     title: 'The Planet Lukukul Collection',
+    timeline: 'Q2',
     description:
       'Public mint of the collectibles with access to the merch, artist support and tour.',
     icon: collection,
   },
 
   {
+    timeline: 'Q3',
     title: 'The Cool Playground',
     description: 'A new product for games and Metaverse experiences.',
     icon: playground,
@@ -70,7 +75,7 @@ export const why = [
   },
   {
     title: 'Merch',
-    timeline: 'Q1',
+    timeline: 'Q2',
     icon: merch,
   },
   {

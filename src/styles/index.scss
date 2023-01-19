@@ -76,22 +76,20 @@ nav {
 .hero {
   overflow: hidden;
 
+  h1 {
+  }
+
   &__cards {
     display: flex;
     gap: 10px;
     width: 100%;
     margin: 0 auto;
     max-width: 800px;
+    margin-top: 56px;
     margin-bottom: 96px;
-    margin-top: 32px;
 
     @media screen and (max-width: 600px) {
-      margin-bottom: 48px;
-      transform: translate(-40px, 0);
-    }
-
-    @media screen and (max-width: 400px) {
-      transform: translate(-100px, 0);
+      transform: translate(-30%, 0);
     }
   }
 
@@ -107,6 +105,11 @@ nav {
       line-height: 88px;
       margin-bottom: 24px;
       text-align: center;
+
+      @media screen and (max-width: 600px) {
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
   }
 
@@ -382,6 +385,7 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
+      opacity: 0.3;
     }
   }
 }
@@ -424,7 +428,6 @@ nav {
   &__timeline {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 2rem 0;
     gap: 40px;
     overflow: hidden;
@@ -474,7 +477,6 @@ nav {
     flex: 1 0 auto;
     border: 1px solid #000000;
     width: 100%;
-    height: 100%;
     max-width: 400px;
     padding: 40px 32px;
     text-align: center;

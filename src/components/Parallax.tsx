@@ -2,11 +2,8 @@
 import { ReactNode, useRef } from 'react';
 import {
   motion,
-  useScroll,
-  useSpring,
   useTransform,
   useMotionValue,
-  useVelocity,
   useAnimationFrame,
 } from 'framer-motion';
 import { wrap } from '@motionone/utils';
@@ -18,12 +15,6 @@ interface ParallaxProps {
 
 const ParallaxText = ({ children, baseVelocity = 100 }: ParallaxProps) => {
   const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400,
-  });
 
   /**
    * This is a magic wrapping for the length of the text - you
