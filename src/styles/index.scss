@@ -77,12 +77,12 @@ nav {
     margin-top: 56px;
     margin-bottom: 96px;
 
-    @media screen and (max-width: 500px) {
-      transform: translate(-30%, 0);
+    @media screen and (max-width: 600px) and (min-width: 501px) {
+      transform: translate(-5%, 0);
     }
 
-    @media screen and (max-width: 600px) {
-      transform: translate(-5%, 0);
+    @media screen and (max-width: 500px) {
+      transform: translate(-30%, 0);
     }
   }
 
@@ -303,10 +303,14 @@ nav {
 
 .world {
   margin: 100px 0;
-  min-height: 100vh;
+  // min-height: 100vh;
   background: #040016;
 
+  .container {
+  }
+
   &__view {
+    display: none;
     position: relative;
     min-height: 600px;
     width: 100%;
@@ -337,7 +341,7 @@ nav {
     color: #ffffff;
     place-items: center;
     padding-top: 48px;
-    padding: 100px;
+    padding: 100px 0;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -815,17 +819,18 @@ footer {
   }
 
   div {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     blur: 20px;
     position: absolute;
-    top: 40%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    // background: black;
     justify-content: center;
     transition: opacity 200ms ease-in;
 
@@ -840,12 +845,12 @@ footer {
 
   button {
     border-radius: 50%;
-    width: 85px;
-    height: 85px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: transparent;
     border: none;
     cursor: pointer;
 
