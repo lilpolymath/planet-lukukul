@@ -3,7 +3,12 @@ import masked_face from '../assets/masked-face.svg';
 import sealed_mouth from '../assets/sealed-mouth.svg';
 import playground from '../assets/playground.svg';
 import collection from '../assets/collection.svg';
-
+import gibson from '../assets/gibson.jpg';
+import ayonete from '../assets/ayonete.jpg';
+import nativemind from '../assets/nativemind.jpg';
+import reespect from '../assets/reespect.jpg';
+import favour from '../assets/favour.jpg';
+import cynthia from '../assets/cynthia.jpg';
 import merch from '../assets/merch.svg';
 import metaverse from '../assets/metaverse.svg';
 import ticket from '../assets/ticket.svg';
@@ -81,13 +86,40 @@ export const why = [
 ];
 
 export const team = [
-  { name: '', img: metaverse, role: '' },
-  { name: '', img: metaverse, role: '' },
-  { name: '', img: metaverse, role: '' },
-  { name: '', img: metaverse, role: '' },
-  { name: '', img: metaverse, role: '' },
-  { name: '', img: metaverse, role: '' },
-  { name: '', img: metaverse, role: '' },
-  { name: '', img: metaverse, role: '' },
-  { name: '', img: metaverse, role: '' },
+  {
+    name: 'aisha hameed',
+    img: reespect,
+    role: 'founder',
+    link: 'https://www.instagram.com/itsreespect/',
+  },
+  {
+    name: 'Gibson Nnadi',
+    img: gibson,
+    role: 'Artist',
+    link: 'https://instagram.com/nightowl2k?igshid=YmMyMTA2M2Y=)',
+  },
+  {
+    name: 'Ayonete Icha ',
+    img: ayonete,
+    role: 'Artist',
+    link: 'https://instagram.com/ayonet.e?igshid=YmMyMTA2M2Y=',
+  },
+  {
+    name: 'Cynthia Ugwudike',
+    img: cynthia,
+    role: 'art director',
+    link: 'https://www.instagram.com/cynthiakay_/',
+  },
+  {
+    name: 'nativemind',
+    img: nativemind,
+    role: 'handler',
+    link: 'https://instagram.com/na.tive.mind?igshid=YmMyMTA2M2Y=',
+  },
+  {
+    name: 'favour',
+    img: favour,
+    role: 'developer',
+    link: 'https://favourcodes.com',
+  },
 ];

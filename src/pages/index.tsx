@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Image from 'next/image';
-import { Inter } from '@next/font/google';
+import { Work_Sans } from '@next/font/google';
 import Logo from '../assets/logo.svg';
 import astro from '../assets/astro.png';
 import lilo from '../assets/lilo.png';
@@ -21,7 +22,7 @@ import { roadmap, team, why } from '@/assets/data';
 import ParallaxText from '@/components/Parallax';
 import { useState } from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
+const work_sans = Work_Sans({ subsets: ['latin'] });
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,13 +54,31 @@ export default function Home() {
             </h1>
             <ul className='nav__links'>
               <li>
-                <a href='#discord'>Discord</a>
+                <a
+                  target='_blank'
+                  rel='noopener nofollow noreferrer'
+                  href='https://discord.com/invite/C9Hesz7uUn'
+                >
+                  Discord
+                </a>
               </li>
               <li>
-                <a href='#instagram'>Instagram</a>
+                <a
+                  target='_blank'
+                  rel='noopener nofollow noreferrer'
+                  href='https://www.instagram.com/toplanetlukukul/'
+                >
+                  Instagram
+                </a>
               </li>
               <li className='nav-button'>
-                <a href='#twiter'>Twitter</a>
+                <a
+                  target='_blank'
+                  rel='noopener nofollow noreferrer'
+                  href='https://mobile.twitter.com/toplanetlukukul'
+                >
+                  Twitter
+                </a>
               </li>
             </ul>
           </header>
@@ -121,7 +140,10 @@ export default function Home() {
                     amet.
                   </p>
 
-                  <a href='#' className='join-btn'>
+                  <a
+                    href='https://discord.com/invite/C9Hesz7uUn'
+                    className='join-btn'
+                  >
                     Join the Community
                   </a>
                 </div>
@@ -176,9 +198,7 @@ export default function Home() {
             <iframe
               src='https://www.youtube.com/embed/1ZQ2Q2Z3Z4'
               title='YouTube video player'
-              frameborder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowfullscreen
             ></iframe>
           </div>
         </div>
@@ -276,10 +296,14 @@ export default function Home() {
           <div className='team__content'>
             {team.map((item, index) => (
               <div className='team__card' key={index}>
-                <img src={item.img.src} alt={item.name} />
+                <img
+                  src={item.img.src}
+                  className='team__card__img'
+                  alt={item.name}
+                />
                 <div className='team__card__content'>
-                  <h5>{item.name}</h5>
-                  <p>{item.role}</p>
+                  <h5>{item.role}</h5>
+                  <p>{item.name}</p>
                 </div>
               </div>
             ))}
@@ -292,7 +316,12 @@ export default function Home() {
           <header className='footer__header'>
             <img src={sealed_mouth.src} alt='' />
             <h2>Escape to a new world.</h2>
-            <a href='#' className='join-btn'>
+            <a
+              target='_blank'
+              rel='noopener nofollow'
+              href='#'
+              className='join-btn'
+            >
               Join the Community
             </a>
           </header>
@@ -308,13 +337,31 @@ export default function Home() {
             </div>
             <ul className='footer__links'>
               <li>
-                <a href='#discord'>Discord</a>
+                <a
+                  target='_blank'
+                  rel='noopener nofollow noreferrer'
+                  href='https://discord.com/invite/C9Hesz7uUn'
+                >
+                  Discord
+                </a>
               </li>
               <li>
-                <a href='#instagram'>Instagram</a>
+                <a
+                  target='_blank'
+                  rel='noopener nofollow noreferrer'
+                  href='https://www.instagram.com/toplanetlukukul/'
+                >
+                  Instagram
+                </a>
               </li>
               <li className='nav-button'>
-                <a href='#twiter'>Twitter</a>
+                <a
+                  target='_blank'
+                  rel='noopener nofollow noreferrer'
+                  href='https://mobile.twitter.com/toplanetlukukul'
+                >
+                  Twitter
+                </a>
               </li>
             </ul>
           </div>
