@@ -143,9 +143,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <h1 className={tan.className}>
-                Escape into a new <br /> world
-              </h1>
+              <h1 className={tan.className}>Escape into a new world</h1>
 
               <div className='hero__info'>
                 <div className='member'>
@@ -259,10 +257,15 @@ export default function Home() {
         </div>
 
         <ParallaxText baseVelocity={-5}>
-          <div className='video__join-btn'>
+          <a
+            target='_blank'
+            rel='noopener nofollow noreferrer'
+            href='https://discord.com/invite/C9Hesz7uUn'
+            className='video__join-btn'
+          >
             <span className={tan.className}>Join the community</span>{' '}
             <img src={planet.src} alt='' />{' '}
-          </div>
+          </a>
         </ParallaxText>
       </section>
 
