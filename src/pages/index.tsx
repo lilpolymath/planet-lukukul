@@ -201,7 +201,11 @@ export default function Home() {
             {/* <img src={world.src} alt='' /> */}
           </div>
           <div className='world__story'>
-            <h2 className={tan.className}>Chapter 1</h2>
+            <div>
+              <h2 className={tan.className}>Chapter 1</h2>
+              <h4> — Great Silence</h4>
+            </div>
+
             <div>
               <p>
                 On Planet Lukukul, unknown villains have stolen everyone's
@@ -301,8 +305,8 @@ export default function Home() {
         <div className='roadmap__timeline mobile'>
           <div className='roadmap__card'>
             <div className='roadmap__card__timeline'>
-              <p className={tan.className}>04</p>
-              <p className={tan.className}>2022</p>
+              <p className={tan.className}>{currentItem.timeline}</p>
+              <p className={tan.className}>2023</p>
             </div>
             <img src={currentItem.icon.src} alt={currentItem.title} />
             <div className='roadmap__card__content'>
