@@ -203,10 +203,10 @@ export default function Home() {
           <div className='world__story'>
             <div>
               <h2 className={tan.className}>Chapter 1</h2>
-              <h4> — Great Silence</h4>
             </div>
 
             <div>
+              <h4> ——— Great Silence ———</h4>
               <p>
                 On Planet Lukukul, unknown villains have stolen everyone's
                 happiness, the people have lost their color and a world that
