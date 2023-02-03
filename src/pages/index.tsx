@@ -335,6 +335,27 @@ export default function Home() {
         }}
       >
         <div className='container'>
+          <div className='why__content'>
+            <h3
+              className='title'
+              style={{
+                fontFamily: tan.style.fontFamily,
+              }}
+            >
+              What you’ll get
+            </h3>
+            <div className='why__cards'>
+              {why.map((item, index) => (
+                <div className='why__card' key={index}>
+                  <img src={item.icon.src} alt={item.title} />
+                  <div className='why__card__content'>
+                    <h5>{item.title}</h5>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <header className='why__header'>
             <h3
               className='title'
@@ -356,27 +377,6 @@ export default function Home() {
               build stands the test of time.
             </p>
           </header>
-
-          <div className='why__content'>
-            <h3
-              className='title'
-              style={{
-                fontFamily: tan.style.fontFamily,
-              }}
-            >
-              What you’ll get
-            </h3>
-            <div className='why__cards'>
-              {why.map((item, index) => (
-                <div className='why__card' key={index}>
-                  <img src={item.icon.src} alt={item.title} />
-                  <div className='why__card__content'>
-                    <h5>{item.title}</h5>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
