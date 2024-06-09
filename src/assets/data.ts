@@ -113,7 +113,7 @@ export const team = [
     name: 'Cynthia Ugwudike',
     img: cynthia,
     role: 'art director',
-    link: 'https://www.instagram.com/cynthiakay_/',
+    link: 'https://www.instagram.com/cynugwu',
   },
   {
     name: 'nativemind',
