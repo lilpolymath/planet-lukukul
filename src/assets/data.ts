@@ -1,20 +1,20 @@
-import handshake from '../assets/handshake.svg';
-import masked_face from '../assets/masked-face.svg';
-import sealed_mouth from '../assets/sealed-mouth.svg';
-import playground from '../assets/playground.svg';
-import collection from '../assets/collection.svg';
-import gibson from '../assets/gibson.jpg';
-import ayonete from '../assets/ayonete.jpg';
-import nativemind from '../assets/nativemind.jpg';
-import reespect from '../assets/reespect.jpg';
-import favour from '../assets/favour.jpeg';
-import cynthia from '../assets/cyn.jpg';
-import merch from '../assets/merch.svg';
-import metaverse from '../assets/metaverse.svg';
-import ticket from '../assets/ticket.svg';
-import music from '../assets/music.svg';
-import phone from '../assets/phone.svg';
-import collectibles from '../assets/collectibles.svg';
+import handshake from '../assets/svg/handshake.svg';
+import masked_face from '../assets/svg/masked-face.svg';
+import sealed_mouth from '../assets/svg/sealed-mouth.svg';
+import playground from '../assets/svg/playground.svg';
+import collection from '../assets/svg/collection.svg';
+import gibson from '../assets/images/gibson.jpg';
+import ayonete from '../assets/images/ayonete.jpg';
+import nativemind from '../assets/images/nativemind.jpg';
+import reespect from '../assets/images/reespect.jpg';
+import favour from '../assets/images/favour.jpeg';
+import cynthia from '../assets/images/cyn.jpg';
+import merch from '../assets/svg/merch.svg';
+import metaverse from '../assets/svg/metaverse.svg';
+import ticket from '../assets/svg/ticket.svg';
+import music from '../assets/svg/music.svg';
+import phone from '../assets/svg/phone.svg';
+import collectibles from '../assets/svg/collectibles.svg';
 
 export const roadmap = [
   {
