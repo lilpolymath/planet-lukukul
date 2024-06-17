@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Logo from '../assets/svg/logo.svg';
 
 const Nav = () => {
@@ -9,31 +11,16 @@ const Nav = () => {
         </h1>
         <ul className='nav__links'>
           <li>
-            <a
-              target='_blank'
-              rel='noopener nofollow noreferrer'
-              href='https://discord.com/invite/C9Hesz7uUn'
-            >
-              Discord
-            </a>
+            <Link href='/lore'>Lore</Link>
           </li>
           <li>
-            <a
-              target='_blank'
-              rel='noopener nofollow noreferrer'
-              href='https://www.instagram.com/toplanetlukukul/'
-            >
-              Instagram
-            </a>
+            <Link href='/shop'>Shop</Link>
           </li>
-          <li className='nav-button'>
-            <a
-              target='_blank'
-              rel='noopener nofollow noreferrer'
-              href='https://mobile.twitter.com/toplanetlukukul'
-            >
-              Twitter
-            </a>
+          <li>
+            <Link href='/Archive'>Archive</Link>
+          </li>
+          <li>
+            <Link href='/events'>Events</Link>
           </li>
         </ul>
       </header>
@@ -42,3 +29,4 @@ const Nav = () => {
 };
 
 export default Nav;
+

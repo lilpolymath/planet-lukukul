@@ -6,6 +6,8 @@ import Nav from '@/components/nav';
 import Hero from '@/components/hero';
 import Footer from '@/components/footer';
 
+import bg from '../assets/images/background.png';
+
 export default function Home() {
   return (
     <>
@@ -18,9 +20,18 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Nav />
-      <Hero />
+      <div className='home__wrapper'>
+        <div
+          className='home__bg-image'
+          style={{
+            backgroundImage: `url(${bg.src})`,
+          }}
+        />
+        <Nav />
+        <Hero />
+      </div>
       <Footer />
     </>
   );
 }
+
