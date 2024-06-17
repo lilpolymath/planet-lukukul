@@ -7,6 +7,7 @@ import Hero from '@/components/hero';
 import Footer from '@/components/footer';
 
 import bg from '../assets/images/background.png';
+import Creators from '@/components/creators';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Nav />
         <Hero />
       </div>
+      <Creators />
       <Footer />
     </>
   );

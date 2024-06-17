@@ -167,6 +167,7 @@ footer {
           color: #ffffff;
         }
       }
+
       @media screen and (max-width: 768px) {
         display: none;
       }
@@ -219,6 +220,12 @@ footer {
         font-size: 16px;
         font-weight: 600;
         display: inline-flex;
+        background: #9b66ff;
+        border: 1px solid #9b66ff;
+
+        &:hover {
+          background: transparent;
+        }
       }
     }
   }
