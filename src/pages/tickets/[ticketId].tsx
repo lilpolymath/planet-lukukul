@@ -1,16 +1,16 @@
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
-import Creators from '@/components/creators';
+import TicketDetails from '@/components/ticket-details';
 
-const creators = () => {
+const TicketId = () => {
   return (
     <>
       <Nav />
-      <Creators />
+      <TicketDetails />
       <Footer />
     </>
   );
 };
 
-export default creators;
+export default TicketId;
 

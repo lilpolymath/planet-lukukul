@@ -9,32 +9,14 @@
 }
 
 :root {
-  --background: #f3f4f5;
-  --foreground: #1a1a1a;
-  --foreground-20: #1a1a1a33;
-  --container-padding: 24px;
-  --accent: #4847e9;
-
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+  --background: #ffffff;
+  --foreground: #241f2e;
+  --accent: #ff55da;
 }
 
 [data-theme='dark'] {
   --background: #1a1a1a;
   --foreground: #f3f4f5;
-  --foreground-20: #f3f4f533;
-
-  --sh-class: #4c97f8;
-  --sh-identifier: #fff;
-  --sh-keyword: #f47067;
-  --sh-string: #0fa295;
 }
 
 [data-theme='dark'] [data-hide-on-theme='dark'],
@@ -95,7 +77,7 @@ svg {
 }
 
 path {
-  fill: var(--foreground) !important;
+  // fill: var(--foreground) !important;
 }
 
 @media (prefers-color-scheme: dark) {
