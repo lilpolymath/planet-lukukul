@@ -312,7 +312,7 @@
   }
 }
 
-.tickets {
+.events {
   &__container {
     @extend .section__container;
     padding-top: 100px;
@@ -337,7 +337,7 @@
   }
 }
 
-.ticket {
+.event {
   &__container {
     display: flex;
     flex-direction: column;
@@ -397,7 +397,7 @@
   }
 }
 
-.ticket-details {
+.event-details {
   &__container {
     @extend .container;
     padding-top: 120px;
@@ -416,6 +416,12 @@
   }
   &__gallery {
     width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__main {
@@ -430,10 +436,11 @@
     gap: 12px;
     justify-content: center;
 
-    > div {
+    > button {
       width: 64px;
       height: 64px;
       background: #d9d9d9;
+      cursor: pointer;
     }
   }
 
@@ -452,6 +459,42 @@
     a {
       width: 100%;
     }
+  }
+}
+
+.store {
+  &__container {
+    @extend .section__container;
+    padding-top: 100px;
+  }
+
+  &__content {
+    @extend .section__content;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+
+    @media screen and (max-width: 920px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 24px;
+    }
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 48px 24px;
+    }
+  }
+}
+
+.store-item {
+  &__container {
+  }
+
+  &__preview {
+  }
+
+  &__content {
   }
 }
 

@@ -1,14 +1,11 @@
-import Nav from '@/components/nav';
-import Footer from '@/components/footer';
+import Layout from '@/components/layout';
 import Creators from '@/components/creators';
 
 const creators = () => {
   return (
-    <>
-      <Nav />
+    <Layout>
       <Creators />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

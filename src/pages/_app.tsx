@@ -24,8 +24,9 @@ const basicSans = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={cx(basicSans.className, sigmarOne.variable)}>
+    <div className={cx(basicSans.className, sigmarOne.variable)}>
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }
+

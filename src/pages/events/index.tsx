@@ -1,16 +1,16 @@
+import Ticket from '@/components/event';
 import Layout from '@/components/layout';
-import StoreItem from '@/components/store-item';
 
-const tickets = () => {
+const Events = () => {
   return (
     <Layout>
-      <section className='store__container'>
+      <section className='events__container'>
         <header className='section__header'>
-          <h2>Our Store</h2>
+          <h2>Get Tickets</h2>
         </header>
-        <div className='store__content'>
+        <div className='events__content'>
           {Array.from({ length: 6 }, (_, i) => i).map((i) => (
-            <StoreItem key={i} />
+            <Ticket key={i} />
           ))}
         </div>
       </section>
@@ -18,5 +18,5 @@ const tickets = () => {
   );
 };
 
-export default tickets;
+export default Events;
 

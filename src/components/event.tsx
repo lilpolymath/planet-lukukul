@@ -3,16 +3,16 @@ import Link from 'next/link';
 import eye from '../assets/svg/eye.svg';
 import ticket from '../assets/svg/ticket.svg';
 
-const Ticket = () => {
+const Event = () => {
   return (
-    <div className='ticket__container'>
-      <div className='ticket__image'>
-        <span className='ticket__tag'>workshop</span>
+    <div className='event__container'>
+      <div className='event__image'>
+        <span className='event__tag'>workshop</span>
       </div>
-      <div className='ticket__details'>
+      <div className='event__details'>
         <h4>Event Name</h4>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        <div className='ticket__actions'>
+        <div className='event__actions'>
           <a
             target='_blank'
             href='https://tix.africa'
@@ -21,7 +21,7 @@ const Ticket = () => {
           >
             get tickets <img src={ticket.src} alt='' />
           </a>
-          <Link href={'/tickets/3'} className='button button--accent'>
+          <Link href={'/events/3'} className='button button--accent'>
             read more <img src={eye.src} alt='' />
           </Link>
         </div>
@@ -30,5 +30,5 @@ const Ticket = () => {
   );
 };
 
-export default Ticket;
+export default Event;
 
