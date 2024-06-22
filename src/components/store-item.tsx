@@ -6,7 +6,7 @@ const StoreItem = () => {
       <div className='store-item__preview'>
         <img src='' alt='' />
 
-        <button>Add to cart</button>
+        <button className='store-item__action'>Add to cart</button>
       </div>
       <div className='store-item__content'>
         <h3>Ticket name 1</h3>
