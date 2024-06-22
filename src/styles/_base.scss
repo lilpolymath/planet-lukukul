@@ -92,27 +92,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
-  font-family: var(--font-sigmar-one);
+  font-weight: 600;
+  font-family: var(--font-clash-display);
+  font-family: 'Clash Display', sans-serif;
 }
 
-// .base-container {
-//   padding: var(--container-padding);
-//   min-height: 100vh;
-//   width: 100%;
-//   position: relative;
-
-//   @media screen and (max-width: 500px) {
-//     --container-padding: 12px;
-//   }
-// }
-
-// .container {
-//   width: 100%;
-//   max-width: 932px;
-//   margin: auto;
-//   padding: 0 16px;
-// }
+@import url(https://api.fontshare.com/v2/css?f[]=clash-display@1&display=swap);
 
 .sr-only {
   position: absolute;

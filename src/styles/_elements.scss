@@ -169,14 +169,16 @@ footer {
   }
 
   h2 {
-    font-size: 46px;
-    line-height: 56px;
+    font-size: 64px;
+    line-height: 72px;
     color: #ffffff;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 64px;
 
     @media screen and (max-width: 768px) {
+      font-size: 64px;
+      line-height: 72px;
     }
   }
 

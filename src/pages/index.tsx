@@ -8,6 +8,7 @@ import Footer from '@/components/footer';
 
 import bg from '../assets/images/background.png';
 import Creators from '@/components/creators';
+import Roadmap from '@/components/roadmap';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <Nav />
         <Hero />
       </div>
+      <Roadmap />
       <Creators />
       <Footer />
     </>

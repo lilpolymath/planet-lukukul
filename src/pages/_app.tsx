@@ -1,16 +1,8 @@
 import '@/styles/index.scss';
 import type { AppProps } from 'next/app';
 import localFont from '@next/font/local';
-import { Sigmar_One } from '@next/font/google';
 
 import { cx } from '@/utils/misc';
-
-const sigmarOne = Sigmar_One({
-  subsets: ['latin'],
-  weight: ['400'],
-  display: 'swap',
-  variable: '--font-sigmar-one',
-});
 
 const basicSans = localFont({
   src: [
@@ -24,7 +16,7 @@ const basicSans = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={cx(basicSans.className, sigmarOne.variable)}>
+    <div className={cx(basicSans.className)}>
       <Component {...pageProps} />
     </div>
   );

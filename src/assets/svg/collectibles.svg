@@ -1,15 +1,14 @@
-<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="30" cy="30" r="29.5" stroke="black"/>
-<rect x="16.5" y="14.5" width="9.18182" height="30.8182" stroke="black"/>
-<rect x="18.868" y="21.9617" width="4.44091" height="12.0773" stroke="black" stroke-width="0.65"/>
-<rect x="18.868" y="21.9617" width="4.44091" height="3.16818" stroke="black" stroke-width="0.65"/>
-<circle cx="21.0923" cy="40.7271" r="2.29545" stroke="black" stroke-width="0.5"/>
-<rect x="25.4062" y="14.5" width="9.18182" height="30.8182" stroke="black"/>
-<rect x="27.7781" y="21.9617" width="4.44091" height="12.0773" stroke="black" stroke-width="0.65"/>
-<rect x="27.7781" y="21.9617" width="4.44091" height="3.16818" stroke="black" stroke-width="0.65"/>
-<circle cx="29.9986" cy="40.7271" r="2.29545" stroke="black" stroke-width="0.5"/>
-<rect x="34.3203" y="14.5" width="9.18182" height="30.8182" stroke="black"/>
-<rect x="36.6922" y="21.9617" width="4.44091" height="12.0773" stroke="black" stroke-width="0.65"/>
-<rect x="36.6922" y="21.9617" width="4.44091" height="3.16818" stroke="black" stroke-width="0.65"/>
-<circle cx="38.9126" cy="40.7271" r="2.29545" stroke="black" stroke-width="0.5"/>
+<svg width="134" height="148" viewBox="0 0 134 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.5" y="1.5" width="44.0518" height="144.037" stroke="#F579DA" stroke-width="3"/>
+<rect x="13.25" y="36.7903" width="20.5259" height="55.8147" stroke="#F579DA" stroke-width="3"/>
+<rect x="13.25" y="36.7903" width="20.5259" height="14.6444" stroke="#F579DA" stroke-width="3"/>
+<circle cx="23.5311" cy="123.51" r="10.2629" stroke="#F579DA" stroke-width="3"/>
+<rect x="44.655" y="1.5" width="44.0518" height="144.037" stroke="#F579DA" stroke-width="3"/>
+<rect x="56.4251" y="36.7903" width="20.5259" height="55.8147" stroke="#F579DA" stroke-width="3"/>
+<rect x="56.4251" y="36.7903" width="20.5259" height="14.6444" stroke="#F579DA" stroke-width="3"/>
+<circle cx="66.6864" cy="123.51" r="10.2629" stroke="#F579DA" stroke-width="3"/>
+<rect x="87.8491" y="1.5" width="44.0518" height="144.037" stroke="#F579DA" stroke-width="3"/>
+<rect x="99.6195" y="36.7903" width="20.5259" height="55.8147" stroke="#F579DA" stroke-width="3"/>
+<rect x="99.6195" y="36.7903" width="20.5259" height="14.6444" stroke="#F579DA" stroke-width="3"/>
+<circle cx="109.88" cy="123.51" r="10.2629" stroke="#F579DA" stroke-width="3"/>
 </svg>

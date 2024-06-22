@@ -15,6 +15,7 @@ import ticket from '../assets/svg/ticket.svg';
 import music from '../assets/svg/music.svg';
 import phone from '../assets/svg/phone.svg';
 import collectibles from '../assets/svg/collectibles.svg';
+import launch from '../assets/svg/launch.svg';
 
 export const roadmap = [
   {
@@ -54,6 +55,29 @@ export const roadmap = [
     title: 'The Cool Playground',
     description: 'A new product for games and Metaverse experiences.',
     icon: playground,
+  },
+];
+
+export const ROADMAP = [
+  {
+    title: 'our launch',
+    description: 'Our community and partners launch all the new features of our website.',
+    icon: launch
+  },
+  {
+    title: 'community access collectibles',
+    description: 'we list our access nfts created based on the current characters on the planet…and reward early users.',
+    icon: collectibles
+  },
+  {
+    title: 'the cool playground',
+    description: 'concurrently, we launch the cool playground product. a capsule for our games and meta verse.',
+    icon: playground
+  },
+  {
+    title: 'tokenize the planet',
+    description: 'launch the planet tokens for easier trade, access and governance.',
+    icon: handshake
   },
 ];
 
