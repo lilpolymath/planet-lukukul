@@ -191,14 +191,16 @@ footer {
       align-items: center;
       gap: 10px;
 
-      li {
+      a {
         border: 1px solid #ffffff;
         border-radius: 40px;
         padding: 10px 32px;
+        font-size: 16px;
+        color: #ffffff;
 
-        a {
-          font-size: 16px;
-          color: #ffffff;
+        &:hover {
+          color: #000000;
+          background: #ffffff;
         }
       }
 

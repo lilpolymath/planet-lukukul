@@ -37,7 +37,13 @@
       font-size: 16px;
       font-weight: 600;
       margin-top: 36px;
+      border: 1px solid #000000;
       display: inline-flex;
+
+      &:hover {
+        color: #000000;
+        background: transparent;
+      }
     }
   }
 
@@ -374,6 +380,8 @@
   }
 
   &__details {
+    padding: 4px 8px;
+
     h4 {
       font-size: 24px;
     }
@@ -466,6 +474,7 @@
   &__container {
     @extend .section__container;
     padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   &__content {
@@ -572,10 +581,16 @@
     opacity: 0;
     cursor: pointer;
     transition: all 250ms ease-in;
+    border: 1px solid #1e1e1e;
 
     @media (pointer: coarse) {
       bottom: 16px;
       opacity: 1;
+    }
+
+    &:hover {
+      color: #1e1e1e;
+      background: #ffffff;
     }
   }
 }
