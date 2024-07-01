@@ -11,7 +11,7 @@ import bg from '../assets/images/bg.png';
 import Creators from '@/components/creators';
 import Roadmap from '@/components/roadmap';
 import StoreItem from '@/components/store-item';
-import { tags } from '@/assets/data';
+import { tags } from '@/utils/data';
 import { cx } from '@/utils/misc';
 import Link from 'next/link';
 

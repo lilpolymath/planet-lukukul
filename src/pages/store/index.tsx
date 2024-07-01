@@ -3,15 +3,10 @@ import { useState } from 'react';
 import Layout from '@/components/layout';
 import StoreItem from '@/components/store-item';
 import { cx } from '@/utils/misc';
-
-const TAGS = {
-  music: 'Music',
-  comics: 'Comics',
-  merch: 'Merch',
-};
+import { tags } from '@/utils/data';
 
 const Tickets = () => {
-  const [selectedTag, setSelectedTag] = useState(Object.keys(TAGS)[0]);
+  const [selectedTag, setSelectedTag] = useState(Object.keys(tags)[0]);
 
   const handleTagClick = (tag) => {
     setSelectedTag(tag);
@@ -19,9 +14,7 @@ const Tickets = () => {
 
   console.log('selectedTag', selectedTag);
 
-  const data = () => {
-    
-  }
+  const data = () => {};
 
   return (
     <Layout>
@@ -29,7 +22,7 @@ const Tickets = () => {
         <header className='section__header'>
           <h2>Our Store</h2>
           <div className='store__tags'>
-            {Object.keys(TAGS).map((tag) => (
+            {Object.keys(tags).map((tag) => (
               <button
                 key={tag}
                 className={cx(
@@ -38,7 +31,7 @@ const Tickets = () => {
                 )}
                 onClick={() => handleTagClick(tag)}
               >
-                {TAGS[tag]}
+                {tags[tag]}
               </button>
             ))}
           </div>
