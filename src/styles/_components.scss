@@ -542,32 +542,26 @@
   }
 
   &__preview {
-    background: #d9d9d9;
-    height: 100%;
-    width: 100%;
     border-radius: 24px;
-    height: 400px;
-    padding: 12px;
+    height: 250px;
+    width: 250px;
     position: relative;
-    overflow: hidden;
+    margin: auto;
 
-    // check if support hover
-    @media (pointer: fine) {
-      &:hover {
-        .store-item__action {
-          opacity: 1;
-          transform: translateY(-64px);
-        }
-      }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
   }
 
   &__content {
     display: flex;
-    gap: 20px;
+    gap: 12px;
     justify-content: space-between;
     align-items: center;
     padding: 0 4px;
+    flex-direction: column;
 
     h3 {
       font-size: 24px;
@@ -575,29 +569,26 @@
 
     p {
       font-size: 14px;
+      color: #a09fa3;
+      font-weight: 600;
     }
   }
 
-  &__action {
-    bottom: -48px;
-    position: absolute;
-    width: calc(100% - 24px);
-    padding: 14px;
-    border-radius: 20px;
-    background-color: #1e1e1e;
-    opacity: 0;
-    cursor: pointer;
-    transition: all 250ms ease-in;
-    border: 1px solid #1e1e1e;
+  &__actions {
+    display: flex;
+    flex-direction: column;
 
-    @media (pointer: coarse) {
-      bottom: 16px;
-      opacity: 1;
-    }
+    button {
+      padding: 14px;
+      border-radius: 20px;
+      width: 100%;
+      font-size: 14px;
+      transition: all 250ms ease-in-out;
 
-    &:hover {
-      color: #1e1e1e;
-      background: #ffffff;
+      &:first-child {
+        background: #ffebfb;
+        color: #db1eb1;
+      }
     }
   }
 }

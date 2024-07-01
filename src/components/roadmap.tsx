@@ -1,4 +1,4 @@
-import { roadmap, ROADMAP } from '@/assets/data';
+import { ROADMAP } from '@/assets/data';
 
 const Roadmap = () => {
   return (
