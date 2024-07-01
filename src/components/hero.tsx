@@ -1,10 +1,11 @@
-import planet from '../assets/images/planet.png';
+import planet from '../assets/images/saturn.png';
 import one from '../assets/images/1.png';
 import two from '../assets/images/2.png';
 import three from '../assets/images/3.png';
 import four from '../assets/images/4.png';
 import five from '../assets/images/5.png';
 import six from '../assets/images/6.png';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -12,19 +13,15 @@ const Hero = () => {
       <div className='container'>
         <div className='hero__container'>
           <div className='hero__content'>
+            <img src={planet.src} alt='' />
             <h1>Escape into a new world</h1>
 
             <div className='join'>
               <p>It’s storytelling, community and social innovation.</p>
 
-              <a
-                href='https://discord.com/invite/C9Hesz7uUn'
-                target={'_blank'}
-                rel='noreferrer'
-                className='join-btn'
-              >
+              <Link href='/lore' className='join-btn'>
                 Explore Lore
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -44,10 +41,9 @@ const Hero = () => {
               <p>Join us today</p>
             </div>
 
-            <div className='planet'>
-              <img src={planet.src} alt='' />
+            {/* <div className='planet'>
               <p>An exterterrstrial experience</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

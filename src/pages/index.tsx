@@ -6,7 +6,7 @@ import Nav from '@/components/nav';
 import Hero from '@/components/hero';
 import Footer from '@/components/footer';
 
-import bg from '../assets/images/background.png';
+import bg from '../assets/images/bg.png';
 import Creators from '@/components/creators';
 import Roadmap from '@/components/roadmap';
 

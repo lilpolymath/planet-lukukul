@@ -92,12 +92,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
-  font-family: var(--font-clash-display);
-  font-family: 'Clash Display', sans-serif;
+  font-weight: 500;
+  font-family: var(--font-kc-neue-teeth);
 }
-
-@import url(https://api.fontshare.com/v2/css?f[]=clash-display@1&display=swap);
 
 .sr-only {
   position: absolute;
