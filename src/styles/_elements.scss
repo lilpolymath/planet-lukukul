@@ -246,23 +246,35 @@ footer {
           height: 80px;
         }
       }
-
-      .join-btn {
-        background: #9b66ff;
-        border-radius: 30px;
-        padding: 16px 48px;
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 600;
-        display: inline-flex;
-        background: #9b66ff;
-        border: 1px solid #9b66ff;
-
-        &:hover {
-          background: transparent;
-        }
-      }
     }
+  }
+}
+
+.join-btn {
+  border-radius: 30px;
+  padding: 16px 48px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  width: fit-content;
+
+  &:hover {
+    background: transparent;
+  }
+
+  &--black {
+    background-color: #000000;
+    border: 1px solid #000000;
+
+    &:hover {
+      color: #000000;
+    }
+  }
+
+  &--purple {
+    background: #9b66ff;
+    border: 1px solid #9b66ff;
   }
 }
 

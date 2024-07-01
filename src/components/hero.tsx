@@ -19,7 +19,7 @@ const Hero = () => {
             <div className='join'>
               <p>It’s storytelling, community and social innovation.</p>
 
-              <Link href='/lore' className='join-btn'>
+              <Link href='/lore' className='join-btn join-btn--black'>
                 Explore Lore
               </Link>
             </div>

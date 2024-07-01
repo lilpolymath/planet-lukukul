@@ -12,7 +12,7 @@ const Footer = () => {
             href='https://discord.com/invite/C9Hesz7uUn'
             target={'_blank'}
             rel='noreferrer'
-            className='join-btn'
+            className='join-btn join-btn--purple'
           >
             Join the Community
           </a>
@@ -63,3 +63,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

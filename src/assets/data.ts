@@ -152,3 +152,10 @@ export const team = [
     link: 'https://favourcodes.com',
   },
 ];
+
+export const tags = {
+  music: 'Music',
+  comics: 'Comics',
+  merch: 'Merch',
+  nfts: 'NFTs',
+};
