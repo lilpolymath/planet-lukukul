@@ -4,7 +4,9 @@ import { stagger, useAnimate } from 'framer-motion';
 import { cx } from '@/utils/misc';
 import storyData from '../utils/story.json';
 import TypingAnimation from './typing-animation';
+
 import check from '../assets/svg/check.svg';
+import lore from '../assets/images/lore/1.jpg';
 
 type Choice = {
   text: string;
@@ -64,7 +66,9 @@ const LoreInteraction: React.FC = () => {
 
   return (
     <section className='lore__container' ref={scope}>
-      <div className='lore__image'>image here</div>
+      <div className='lore__image'>
+        <img src={lore.src} alt='' />
+      </div>
       <form className='lore__content'>
         <div className='lore__text'>
           <TypingAnimation
@@ -76,51 +80,65 @@ const LoreInteraction: React.FC = () => {
           />
         </div>
 
-        <div className='lore__options'>
-          {currentNode.choices.map((choice, index) => (
-            <div className='lore__options__node__container' key={index}>
-              {selectedChoice === choice && (
-                <div className='lore__options__node__check'>
-                  <img src={check.src} alt='check' />
-                </div>
-              )}
-              <label
-                htmlFor={choice.next}
-                className={cx(
-                  'lore__options__node',
-                  selectedChoice &&
-                    selectedChoice === choice &&
-                    'lore__options__node--selected'
+        {currentNode.choices.length > 0 && (
+          <div className='lore__options'>
+            {currentNode.choices.map((choice, index) => (
+              <div className='lore__options__node__container' key={index}>
+                {selectedChoice === choice && (
+                  <div className='lore__options__node__check'>
+                    <img src={check.src} alt='check' />
+                  </div>
                 )}
-                style={{
-                  pointerEvents: status === 'done' ? 'auto' : 'none',
-                }}
-              >
-                {choice.text}
-              </label>
-              <input
-                id={choice.next}
-                name='choice'
-                type='radio'
-                checked={selectedChoice === choice}
-                onChange={() => setSelectedChoice(choice)}
-                value={choice.next}
-              />
-            </div>
-          ))}
-        </div>
-
-        {selectedChoice && (
-          <button
-            type='button'
-            className='lore__options__next'
-            onClick={() => {
-              handleChoice(selectedChoice.next);
-            }}
-          >
-            Next
-          </button>
+                <label
+                  htmlFor={choice.next}
+                  className={cx(
+                    'lore__options__node',
+                    selectedChoice &&
+                      selectedChoice === choice &&
+                      'lore__options__node--selected'
+                  )}
+                  style={{
+                    pointerEvents: status === 'done' ? 'auto' : 'none',
+                  }}
+                >
+                  {choice.text}
+                </label>
+                <input
+                  id={choice.next}
+                  name='choice'
+                  type='radio'
+                  checked={selectedChoice === choice}
+                  onChange={() => setSelectedChoice(choice)}
+                  value={choice.next}
+                />
+              </div>
+            ))}
+          </div>
         )}
+
+        {selectedChoice ? (
+          selectedChoice.next ? (
+            <button
+              type='button'
+              className='lore__options__next'
+              onClick={() => {
+                handleChoice(selectedChoice.next);
+              }}
+            >
+              Next
+            </button>
+          ) : (
+            <button
+              type='button'
+              className='lore__options__next'
+              onClick={() => {
+                handleChoice('intro');
+              }}
+            >
+              Find out your Archetype
+            </button>
+          )
+        ) : null}
       </form>
     </section>
   );
