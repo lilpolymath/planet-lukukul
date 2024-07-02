@@ -4,9 +4,11 @@ import LoreInteraction from '@/components/lore-interaction';
 const lore = () => {
   return (
     <Layout>
-      <section className='creators__container'>
-        <LoreInteraction />
-      </section>
+      <div className='lore__wrapper'>
+        <section className='section__container'>
+          <LoreInteraction />
+        </section>
+      </div>
     </Layout>
   );
 };
