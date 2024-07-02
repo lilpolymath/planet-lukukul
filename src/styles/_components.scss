@@ -500,8 +500,10 @@
     border-radius: 48px;
     width: fit-content;
     display: flex;
-    gap: 16px;
+    gap: 10px;
     margin: 12px auto;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__tag {
