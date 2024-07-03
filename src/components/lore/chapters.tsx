@@ -1,28 +1,48 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from 'next/link';
-import { useAnimate } from 'framer-motion';
-import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { inView, useAnimate } from 'framer-motion';
+import { FC, useEffect, useRef, useState } from 'react';
 
 import { Chapter } from '@/utils/types';
-import lore from '@/assets/images/lore/1.jpeg';
+import { chapterImages } from '@/utils/data';
 import chaptersData from '../../utils/chapters.json';
 
 const LoreChapters: FC = () => {
-  const [scope, animate] = useAnimate();
   const [currentChapterIndex, setCurrentChapterIndex] = useState<number>(0);
+  const [scope, animate] = useAnimate();
 
   const scrollToRef = useRef(null);
   const [offset, setOffset] = useState(0);
+
+  const [activeImage, setActiveImage] = useState<string>(
+    chapterImages[0].url.src
+  );
 
   const currentChapter: Chapter = chaptersData.chapters[
     currentChapterIndex
   ] as Chapter;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (scrollToRef.current) {
       setOffset(scrollToRef.current.getBoundingClientRect().height);
     }
+
+    inView(
+      '.story__image',
+      ({ target }) => {
+        const targetElement = target as HTMLElement;
+        const artist = targetElement.dataset.artist;
+
+        const img = chapterImages.find((image) => image.artist === artist);
+
+        setActiveImage(img.url.src);
+      },
+      {
+        margin: '0px 100px -50px 0px',
+        amount: 1,
+      }
+    );
   }, [currentChapterIndex]);
 
   useEffect(() => {
@@ -56,7 +76,7 @@ const LoreChapters: FC = () => {
       <h2 className='lore__title'>{currentChapter.chapterTitle}</h2>
       <div className='lore__container' ref={scope}>
         <div className='lore__image'>
-          <img src={lore.src} alt='' />
+          <img src={activeImage} alt='' />
         </div>
         <div className='lore__content'>
           <div className='story__outline'>
@@ -65,6 +85,16 @@ const LoreChapters: FC = () => {
                 {currentChapter.content.map((item, index) => {
                   if (typeof item === 'string') {
                     return <p key={index}>{item}</p>;
+                  } else if (item.type === 'illustration') {
+                    return (
+                      <div
+                        className='story__image'
+                        data-artist={item.description}
+                        key={index}
+                      >
+                        <img src={''} alt='' />
+                      </div>
+                    );
                   }
                   return null;
                 })}

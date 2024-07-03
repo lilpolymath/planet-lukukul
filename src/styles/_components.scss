@@ -20,7 +20,7 @@
 
     img {
       height: 40px;
-      margin-bottom: 48px;
+      margin: 48px 0 16px;
       object-fit: contain;
     }
 
@@ -107,6 +107,10 @@
     background-color: rgb(102, 254, 203);
     background-position: bottom right;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+      background-position: 25vw 100%;
+    }
   }
 }
 
@@ -502,6 +506,8 @@
     display: flex;
     gap: 16px;
     margin: 12px auto;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__tag {
@@ -771,6 +777,7 @@
         appearance: none;
         background-color: #fff;
         margin: 0;
+        width: 0;
 
         &:checked ~ .lore__options__node__check {
           opacity: 1;
@@ -812,6 +819,7 @@
       padding: 16px 48px;
       cursor: pointer;
       display: flex;
+      color: #ffffff;
     }
   }
 
@@ -821,7 +829,11 @@
       height: auto;
       object-fit: cover;
       object-position: center;
-      min-height: 600px;
+      max-height: 625px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 

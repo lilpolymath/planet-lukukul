@@ -258,6 +258,7 @@ footer {
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
+  line-height: 24px;
   display: flex;
   width: fit-content;
   cursor: pointer;
@@ -282,9 +283,6 @@ footer {
 
   &--outline {
     border: 1px solid #ffffff;
-    border-radius: 40px;
-    padding: 10px 32px;
-    font-size: 16px;
     color: #ffffff;
     background: transparent;
 
