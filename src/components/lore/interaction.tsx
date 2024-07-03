@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { FC, useEffect, useState } from 'react';
 import { stagger, useAnimate } from 'framer-motion';
 
@@ -15,7 +16,7 @@ import LoreOption from './option';
 import ArchetypeResult from './archetype';
 import TypingAnimation from '../typing-animation';
 
-import lore from '@/assets/images/lore/1.jpg';
+import lore from '@/assets/images/lore/1.jpeg';
 
 const LoreImage: FC = () => (
   <div className='lore__image'>

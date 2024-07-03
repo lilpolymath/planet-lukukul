@@ -1,9 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
+
 import Link from 'next/link';
 import { useAnimate } from 'framer-motion';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 import { Chapter } from '@/utils/types';
-import lore from '@/assets/images/lore/1.jpg';
+import lore from '@/assets/images/lore/1.jpeg';
 import chaptersData from '../../utils/chapters.json';
 
 const LoreChapters: FC = () => {
@@ -17,7 +19,7 @@ const LoreChapters: FC = () => {
     currentChapterIndex
   ] as Chapter;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (scrollToRef.current) {
       setOffset(scrollToRef.current.getBoundingClientRect().height);
     }
