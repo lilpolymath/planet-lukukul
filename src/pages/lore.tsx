@@ -1,4 +1,5 @@
 import Footer from '@/components/footer';
+import LoreChapters from '@/components/lore-chapters';
 import LoreInteraction from '@/components/lore-interaction';
 import Nav from '@/components/nav';
 
@@ -9,7 +10,8 @@ const lore = () => {
         <Nav />
 
         <section className='section__container'>
-          <LoreInteraction />
+          <LoreChapters />
+          {/* <LoreInteraction /> */}
         </section>
       </div>
       <Footer />

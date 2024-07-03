@@ -705,9 +705,15 @@
     font-weight: 500;
     line-height: 32px;
     min-height: 200px;
+    max-height: 600px;
+    overflow: hidden;
 
     &__node {
       opacity: 0;
+    }
+
+    p + p {
+      margin-top: 40px;
     }
   }
 
@@ -786,7 +792,28 @@
     img {
       width: 100%;
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
+      object-position: center;
+      min-height: 600px;
+    }
+  }
+}
+
+.story {
+  @extend .lore;
+  --offset: -300px;
+
+  &__text {
+    @extend .lore__text;
+
+    > div {
+      animation: scroll 10s ease-in forwards;
+    }
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateY(var(--offset, -50%));
     }
   }
 }
