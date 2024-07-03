@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@motionone/utils": "^10.18.0",
     "@next/font": "13.1.2",
     "@supabase/supabase-js": "^2.4.0",
     "@types/node": "18.11.18",
