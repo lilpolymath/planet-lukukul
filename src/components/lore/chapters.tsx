@@ -6,7 +6,7 @@ import { FC, useEffect, useRef, useState } from 'react';
 
 import { Chapter } from '@/utils/types';
 import { chapterImages } from '@/utils/data';
-import chaptersData from '../../utils/chapters.json';
+import chaptersData from '@/utils/chapters.json';
 
 const LoreChapters: FC = () => {
   const [currentChapterIndex, setCurrentChapterIndex] = useState<number>(0);
@@ -86,12 +86,7 @@ const LoreChapters: FC = () => {
                   if (typeof item === 'string') {
                     return <p key={index}>{item}</p>;
                   } else if (item.type === 'illustration') {
-                    return (
-                      <div
-                        data-artist={item.description}
-                        key={index}
-                     />
-                    );
+                    return <div data-artist={item.description} key={index} />;
                   }
                   return null;
                 })}
