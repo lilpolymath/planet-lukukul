@@ -1,21 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-import chaptersData from '../utils/chapters.json';
-
-type Story = {
-  title: string;
-  chapters: Chapter[];
-};
-
-type Chapter = {
-  chapterTitle: string;
-  content: (string | Media)[];
-};
-
-type Media = {
-  type: 'music' | 'illustration';
-  description: string;
-};
+import chaptersData from '../../utils/chapters.json';
+import { Story, Chapter } from '@/utils/types';
 
 const chapters: Story = {
   title: 'To Planet Lukukul',
