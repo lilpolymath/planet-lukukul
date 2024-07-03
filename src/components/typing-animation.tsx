@@ -1,5 +1,7 @@
-import { cx } from '@/utils/misc';
+/* eslint-disable @next/next/no-img-element */
+
 import { useEffect, useState } from 'react';
+import { cx } from '@/utils/misc';
 
 interface TypingAnimationProps {
   text: string;

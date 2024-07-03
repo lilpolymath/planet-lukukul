@@ -79,7 +79,7 @@ const LoreInteraction: FC = () => {
   }, [status, animate]);
 
   return (
-    <section className='lore__container' ref={scope}>
+    <section className='lore__section' ref={scope}>
       <LoreImage />
       {!finalArchetype ? (
         <form className='lore__content'>

@@ -1,6 +1,6 @@
 {
   "intro": {
-    "text": "You, dear reader, found yourself drawn into the echoes of the vessel too. The winds await your decision. Choose your path wisely, for your choices will resonate through the universe and Mystura will feel your presence. You [insert name] [insert mail to get your archetype at the end] are also on Eden as a",
+    "text": "You, dear reader, found yourself drawn into the echoes of the vessel too. The winds await your decision. Choose your path wisely, for your choices will resonate through the universe and Mystura will feel your presence. You, [insert name], are also on Eden as a",
     "choices": [
       { "text": "Artist", "next": "artist_intro" },
       { "text": "Comrade", "next": "comrade_intro" }

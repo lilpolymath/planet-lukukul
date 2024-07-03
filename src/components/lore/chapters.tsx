@@ -39,7 +39,7 @@ const LoreChapters: FC = () => {
         setActiveImage(img.url.src);
       },
       {
-        margin: '0px 100px -50px 0px',
+        margin: '0px 50px -50px 0px',
         amount: 1,
       }
     );
@@ -74,7 +74,7 @@ const LoreChapters: FC = () => {
   return (
     <section className='story'>
       <h2 className='lore__title'>{currentChapter.chapterTitle}</h2>
-      <div className='lore__container' ref={scope}>
+      <div className='lore__section' ref={scope}>
         <div className='lore__image'>
           <img src={activeImage} alt='' />
         </div>
@@ -88,12 +88,9 @@ const LoreChapters: FC = () => {
                   } else if (item.type === 'illustration') {
                     return (
                       <div
-                        className='story__image'
                         data-artist={item.description}
                         key={index}
-                      >
-                        <img src={''} alt='' />
-                      </div>
+                     />
                     );
                   }
                   return null;
@@ -123,7 +120,7 @@ const LoreChapters: FC = () => {
               Go to Part One
             </button>
 
-            <Link className='join-btn join-btn--purple' href='/lore/part-three'>
+            <Link className='join-btn join-btn--purple' href='/lore/archetype'>
               Go to Part Three
             </Link>
           </>
