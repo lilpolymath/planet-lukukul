@@ -1,7 +1,6 @@
+import Nav from '@/components/nav';
 import Footer from '@/components/footer';
 import LoreChapters from '@/components/lore/chapters';
-import LoreInteraction from '@/components/lore/interaction';
-import Nav from '@/components/nav';
 
 const lore = () => {
   return (
@@ -10,8 +9,7 @@ const lore = () => {
         <Nav />
 
         <section className='section__container'>
-          {/* <LoreChapters /> */}
-          <LoreInteraction />
+          <LoreChapters />
         </section>
       </div>
       <Footer />

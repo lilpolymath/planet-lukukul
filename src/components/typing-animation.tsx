@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 interface TypingAnimationProps {
   text: string;
+  delay?: number;
   duration?: number;
   className?: string;
   onStart?: () => void;
@@ -11,16 +12,27 @@ interface TypingAnimationProps {
 
 export default function TypingAnimation({
   text,
+  delay = 0,
   duration = 200,
   className,
   onStart,
   onFinish,
 }: TypingAnimationProps) {
-  const [displayedText, setDisplayedText] = useState<string>('');
   const [i, setI] = useState<number>(0);
+  const [displayedText, setDisplayedText] = useState<string>('');
+  const [isDelayed, setIsDelayed] = useState<boolean>(true);
 
   useEffect(() => {
-    onStart && onStart();
+    const delayTimeout = setTimeout(() => {
+      setIsDelayed(false);
+      onStart && onStart();
+    }, delay);
+
+    return () => clearTimeout(delayTimeout);
+  }, [delay, onStart]);
+
+  useEffect(() => {
+    if (isDelayed) return;
 
     const typingEffect = setInterval(() => {
       if (i < text.length) {
@@ -32,14 +44,13 @@ export default function TypingAnimation({
       }
     }, duration);
 
-    return () => {
-      clearInterval(typingEffect);
-    };
-  }, [duration, i]);
+    return () => clearInterval(typingEffect);
+  }, [duration, i, isDelayed, onFinish]);
 
   useEffect(() => {
     setDisplayedText('');
     setI(0);
+    setIsDelayed(true);
   }, [text]);
 
   return <p className={cx(className)}>{displayedText}</p>;

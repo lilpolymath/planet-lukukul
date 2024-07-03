@@ -260,6 +260,7 @@ footer {
   font-weight: 600;
   display: flex;
   width: fit-content;
+  cursor: pointer;
 
   &:hover {
     background: transparent;
@@ -277,6 +278,20 @@ footer {
   &--purple {
     background: #9b66ff;
     border: 1px solid #9b66ff;
+  }
+
+  &--outline {
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    padding: 10px 32px;
+    font-size: 16px;
+    color: #ffffff;
+    background: transparent;
+
+    &:hover {
+      color: #000000;
+      background: #ffffff;
+    }
   }
 }
 

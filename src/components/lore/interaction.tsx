@@ -86,6 +86,7 @@ const LoreInteraction: FC = () => {
             <TypingAnimation
               text={currentNode.text}
               duration={40}
+              delay={currentNodeKey ? 1000 : 0}
               onStart={() => setStatus('typing')}
               onFinish={() => setStatus('done')}
               className='lore__text__node'
