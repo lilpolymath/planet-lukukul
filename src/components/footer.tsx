@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className='container'>
         <header className='footer__header'>
-          <img src={sealed_mouth.src} alt='' loading='lazy' />
+          <img src={sealed_mouth.src} alt='' />
           <h2>Escape to a new world.</h2>
           <a
             href='https://discord.com/invite/C9Hesz7uUn'

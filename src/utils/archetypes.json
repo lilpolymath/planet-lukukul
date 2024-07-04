@@ -1,0 +1,40 @@
+{
+  "archetypes": [
+    {
+      "name": "Francis Ocean",
+      "title": "The Harmony Keeper",
+      "description": "As you land, you’re enchanted by Lukukul's harmonious essence, you decide to engage with the inhabitants, you become a beacon of kindness, extreme calmness and respect. Your commitment to harmony elevates your team’s energy on Lukukul and you all decide to stay instead of returning to Eden. Making you a cherished guardian of balance. Just like Francis Ocean.",
+      "conditions": ["artist_intro", "build_spacecraft_only", "tell_reespect"]
+    },
+    {
+      "name": "Kate 674",
+      "title": "The Inquisitive Explorer",
+      "description": "Upon landing on Lukukul, your insatiable curiosity compels you to explore every corner of this advanced realm. You engage with the technologies, unraveling secrets, and become a seeker of knowledge. Your relentless exploration reveals hidden truths about Lukukul's advanced civilization. Your insatiable curiosity leads to the discovery of cosmic advancements, contributing to Lukukul's ongoing evolution. Just like Kate 674.",
+      "conditions": [
+        "artist_intro",
+        "artist_find_site",
+        "artist_spread_word",
+        "go_back_to_town"
+      ]
+    },
+    {
+      "name": "Agent Reespect",
+      "title": "The Strategist",
+      "description": "As the spaceship nears completion, you take a step back, assessing the situation with a strategic mind. You identify potential threats and opportunities that may arise during the quest for the valve. You make a list of all them and share with everyone else but with Mr Hoom first. Your strategic prowess proves invaluable, influencing the course of events and shaping the destiny of the adventure. You are a serving leader. Just like Agent Reespect.",
+      "conditions": ["comrade_intro", "travel_with_crew", "tell_francis"]
+    },
+    {
+      "name": "Bouncing Baby b",
+      "title": "Nobody Understands You...Yet",
+      "description": "As the love child of a human and one of the guides your adventure doesn’t start till we tell our next story. One thing we do know is that you’re very different from others...in a good way of course. Just like Bouncing Baby b.",
+      "conditions": ["artist_intro", "comrade_intro"]
+    },
+    {
+      "name": "Mr Hoom",
+      "title": "The Guardian",
+      "description": "You are very protective of family and friends and you do not care that strangers do not understand that. Who cares? Why should you have to explain why your blood boils when you see injustice? Your commitment to harmony and justice makes you a beacon of positivity on Lukukul, fostering unity and safeguarding the realm from potential threats, just like on Eden.",
+      "conditions": ["comrade_intro", "artist_join_comrades", "confront_kate"]
+    }
+  ]
+}
+

@@ -3,7 +3,7 @@ import Creators from '@/components/creators';
 
 const creators = () => {
   return (
-    <Layout>
+    <Layout title='Creators'>
       <Creators />
     </Layout>
   );
