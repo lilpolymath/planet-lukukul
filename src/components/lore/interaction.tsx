@@ -25,9 +25,9 @@ const LoreImage: FC = () => (
 );
 
 const LoreInteraction: FC = () => {
+  const [userChoices, setUserChoices] = useState<string[]>([]);
   const [currentNodeKey, setCurrentNodeKey] = useState<string>('intro');
   const [selectedChoice, setSelectedChoice] = useState<Choice | null>(null);
-  const [userChoices, setUserChoices] = useState<string[]>([]);
   const [finalArchetype, setFinalArchetype] = useState<Archetype | null>(null);
 
   const [scope, animate] = useAnimate();
@@ -76,7 +76,7 @@ const LoreInteraction: FC = () => {
         : [['label', { opacity: 0, y: '50%' }, { duration: 0.0001 }]];
 
     animate(sequence);
-  }, [status, animate]);
+  }, [status]);
 
   return (
     <section className='lore__section' ref={scope}>
@@ -88,9 +88,13 @@ const LoreInteraction: FC = () => {
               <TypingAnimation
                 text={currentNode.text}
                 duration={40}
-                delay={currentNodeKey ? 1000 : 0}
-                onStart={() => setStatus('typing')}
-                onFinish={() => setStatus('done')}
+                delay={currentNodeKey === 'intro' ? 1000 : 500}
+                onStart={() => {
+                  setStatus('typing');
+                }}
+                onFinish={() => {
+                  setStatus('done');
+                }}
                 className='lore__text__node'
               />
             </div>

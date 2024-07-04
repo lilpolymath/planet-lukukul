@@ -1,6 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+import { useEffect, useState, useCallback } from 'react';
 
-import { useEffect, useState } from 'react';
 import { cx } from '@/utils/misc';
 
 interface TypingAnimationProps {
@@ -12,10 +11,12 @@ interface TypingAnimationProps {
   onFinish?: () => void;
 }
 
+const DEFAULT_DURATION = 200;
+
 export default function TypingAnimation({
   text,
   delay = 0,
-  duration = 200,
+  duration = DEFAULT_DURATION,
   className,
   onStart,
   onFinish,
@@ -24,35 +25,41 @@ export default function TypingAnimation({
   const [displayedText, setDisplayedText] = useState<string>('');
   const [isDelayed, setIsDelayed] = useState<boolean>(true);
 
-  useEffect(() => {
-    const delayTimeout = setTimeout(() => {
-      setIsDelayed(false);
-      onStart && onStart();
-    }, delay);
+  const handleStart = useCallback(() => {
+    onStart && onStart();
+  }, [onStart]);
 
-    return () => clearTimeout(delayTimeout);
-  }, [delay, onStart]);
+  const handleFinish = useCallback(() => {
+    onFinish && onFinish();
+  }, [onFinish]);
 
   useEffect(() => {
     if (isDelayed) return;
 
     const typingEffect = setInterval(() => {
       if (i < text.length) {
-        setDisplayedText(text.substring(0, i + 1));
+        setDisplayedText((prev) => text.substring(0, i + 1));
         setI((prev) => prev + 1);
       } else {
-        onFinish && onFinish();
+        handleFinish();
         clearInterval(typingEffect);
       }
     }, duration);
 
     return () => clearInterval(typingEffect);
-  }, [duration, i, isDelayed, onFinish]);
+  }, [duration, i, isDelayed, text]);
 
   useEffect(() => {
     setDisplayedText('');
     setI(0);
     setIsDelayed(true);
+
+    const delayTimeout = setTimeout(() => {
+      setIsDelayed(false);
+      handleStart();
+    }, delay);
+
+    return () => clearTimeout(delayTimeout);
   }, [text]);
 
   return <p className={cx(className)}>{displayedText}</p>;
