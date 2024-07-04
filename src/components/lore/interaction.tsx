@@ -80,57 +80,59 @@ const LoreInteraction: FC = () => {
 
   return (
     <section className='lore__section' ref={scope}>
-      <LoreImage />
       {!finalArchetype ? (
-        <form className='lore__content'>
-          <div className='lore__text'>
-            <TypingAnimation
-              text={currentNode.text}
-              duration={40}
-              delay={currentNodeKey ? 1000 : 0}
-              onStart={() => setStatus('typing')}
-              onFinish={() => setStatus('done')}
-              className='lore__text__node'
-            />
-          </div>
-
-          {currentNode.choices && currentNode.choices.length > 0 ? (
-            <div className='lore__options'>
-              {currentNode.choices.map((choice, index) => (
-                <LoreOption
-                  key={index}
-                  choice={choice}
-                  isSelected={selectedChoice === choice}
-                  onSelect={() => setSelectedChoice(choice)}
-                  isEnabled={status === 'done'}
-                />
-              ))}
+        <>
+          <LoreImage />
+          <form className='lore__content'>
+            <div className='lore__text'>
+              <TypingAnimation
+                text={currentNode.text}
+                duration={40}
+                delay={currentNodeKey ? 1000 : 0}
+                onStart={() => setStatus('typing')}
+                onFinish={() => setStatus('done')}
+                className='lore__text__node'
+              />
             </div>
-          ) : (
-            status === 'done' && (
+
+            {currentNode.choices && currentNode.choices.length > 0 ? (
+              <div className='lore__options'>
+                {currentNode.choices.map((choice, index) => (
+                  <LoreOption
+                    key={index}
+                    choice={choice}
+                    isSelected={selectedChoice === choice}
+                    onSelect={() => setSelectedChoice(choice)}
+                    isEnabled={status === 'done'}
+                  />
+                ))}
+              </div>
+            ) : (
+              status === 'done' && (
+                <button
+                  type='button'
+                  className='lore__options__next'
+                  onClick={findMatchingArchetype}
+                >
+                  Find out your Archetype
+                </button>
+              )
+            )}
+
+            {selectedChoice && selectedChoice.next && (
               <button
                 type='button'
                 className='lore__options__next'
-                onClick={findMatchingArchetype}
+                onClick={() => {
+                  setUserChoices([...userChoices, selectedChoice.next]);
+                  handleChoice(selectedChoice.next);
+                }}
               >
-                Find out your Archetype
+                Next
               </button>
-            )
-          )}
-
-          {selectedChoice && selectedChoice.next && (
-            <button
-              type='button'
-              className='lore__options__next'
-              onClick={() => {
-                setUserChoices([...userChoices, selectedChoice.next]);
-                handleChoice(selectedChoice.next);
-              }}
-            >
-              Next
-            </button>
-          )}
-        </form>
+            )}
+          </form>
+        </>
       ) : (
         <ArchetypeResult archetype={finalArchetype} />
       )}

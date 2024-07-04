@@ -873,6 +873,10 @@
       max-height: 625px;
     }
 
+    &.-show {
+      display: block !important;
+    }
+
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -885,7 +889,7 @@
       font-family: var(--font-poppins);
       font-weight: 500;
       font-size: 32px;
-      line-height: 1;
+      line-height: 40px;
       margin-bottom: 24px;
     }
 
@@ -896,19 +900,11 @@
   }
 
   &__hero {
-    &__bg-image {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background-size: contain;
-      // background-color: rgb(102, 254, 203);
-      background-position: bottom right;
-      background-repeat: no-repeat;
-
-      @media screen and (max-width: 768px) {
-        background-position: 25vw 100%;
-      }
-    }
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

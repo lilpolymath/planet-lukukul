@@ -24,9 +24,9 @@
       "conditions": ["comrade_intro", "travel_with_crew", "tell_francis"]
     },
     {
-      "name": "Bouncing baby b",
+      "name": "Bouncing Baby b",
       "title": "Nobody Understands You...Yet",
-      "description": "As the love child of a human and one of the guides your adventure doesn’t start till we tell our next story. One thing we do know is that you’re very different from others...in a good way of course. Just like Bouncing baby b.",
+      "description": "As the love child of a human and one of the guides your adventure doesn’t start till we tell our next story. One thing we do know is that you’re very different from others...in a good way of course. Just like Bouncing Baby b.",
       "conditions": ["artist_intro", "comrade_intro"]
     },
     {
