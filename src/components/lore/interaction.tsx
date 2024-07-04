@@ -9,8 +9,8 @@ import {
   StoryNode,
 } from '@/utils/types';
 
-import storyData from '@/utils/story.json';
-import archetypeData from '@/utils/archetypes.json';
+import storyData from '@/lore-data/story.json';
+import archetypeData from '@/lore-data/archetypes.json';
 
 import LoreOption from './option';
 import ArchetypeResult from './archetype-result';
