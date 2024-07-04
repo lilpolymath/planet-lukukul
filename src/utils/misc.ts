@@ -1,5 +1,8 @@
 export const cx = (...classes) => classes.filter(Boolean).join(' ');
 
+export const wait = (delay = 1000) =>
+  new Promise((resolve) => setTimeout(resolve, delay));
+
 const buildTweet = ({
   pageUrl,
   tweetContent,

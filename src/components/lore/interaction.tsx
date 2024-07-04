@@ -34,6 +34,7 @@ const LoreInteraction: FC = () => {
   const [status, setStatus] = useState<TypingAnimationState>('idle');
 
   const currentNode: StoryNode = (storyData as any)[currentNodeKey];
+  const name = localStorage.getItem('pl-name') || 'Anonymous';
 
   const findMatchingArchetype = () => {
     const bestMatch = archetypeData.archetypes.reduce(
@@ -86,7 +87,7 @@ const LoreInteraction: FC = () => {
           <form className='lore__content'>
             <div className='lore__text'>
               <TypingAnimation
-                text={currentNode.text}
+                text={currentNode.text.replace(/\[insert name\]/g, name)}
                 duration={40}
                 delay={currentNodeKey === 'intro' ? 1000 : 500}
                 onStart={() => {
