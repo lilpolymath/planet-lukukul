@@ -86,7 +86,13 @@ const LoreChapters: FC = () => {
                   if (typeof item === 'string') {
                     return <p key={index}>{item}</p>;
                   } else if (item.type === 'illustration') {
-                    return <div data-artist={item.description} key={index} />;
+                    return (
+                      <div
+                        className='story__image'
+                        data-artist={item.description}
+                        key={index}
+                      />
+                    );
                   }
                   return null;
                 })}

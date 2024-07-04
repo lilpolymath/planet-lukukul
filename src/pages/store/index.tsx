@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import Layout from '@/components/layout';
 import StoreItem from '@/components/store-item';
+
 import { cx } from '@/utils/misc';
 import { tags } from '@/utils/data';
 
@@ -17,7 +18,7 @@ const Tickets = () => {
   const data = () => {};
 
   return (
-    <Layout>
+    <Layout title='Store'>
       <section className='store__container'>
         <header className='section__header'>
           <h2>Our Store</h2>

@@ -13,7 +13,7 @@ import storyData from '@/utils/story.json';
 import archetypeData from '@/utils/archetypes.json';
 
 import LoreOption from './option';
-import ArchetypeResult from './archetype';
+import ArchetypeResult from './archetype-result';
 import TypingAnimation from '../typing-animation';
 
 import lore from '@/assets/images/lore/1.jpeg';

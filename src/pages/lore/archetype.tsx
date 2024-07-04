@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 
 import Nav from '@/components/nav';
+import Meta from '@/components/meta';
 import Footer from '@/components/footer';
 import LoreInteraction from '@/components/lore/interaction';
 
@@ -11,6 +13,7 @@ const Lore = () => {
 
   return (
     <>
+      <Meta title='Archetype' />
       <div className='lore__wrapper'>
         <Nav />
 
