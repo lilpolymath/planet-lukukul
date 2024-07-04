@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import { FC } from 'react';
 
 import { cx } from '@/utils/misc';
 import { Choice } from '@/utils/types';
+
 import check from '@/assets/svg/check.svg';
 
 type LoreOptionProps = {
@@ -43,3 +45,4 @@ const LoreOption: FC<LoreOptionProps> = ({
 );
 
 export default LoreOption;
+

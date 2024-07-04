@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Creators = () => {
   return (
     <section className='creators__container'>

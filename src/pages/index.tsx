@@ -1,20 +1,19 @@
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 
 import Nav from '@/components/nav';
 import Hero from '@/components/hero';
+import Meta from '@/components/meta';
 import Footer from '@/components/footer';
+import Roadmap from '@/components/roadmap';
+import Creators from '@/components/creators';
+import StoreItem from '@/components/store-item';
+
+import { cx } from '@/utils/misc';
+import { tags } from '@/utils/data';
 
 import bg from '@/assets/images/bg.png';
-import Creators from '@/components/creators';
-import Roadmap from '@/components/roadmap';
-import StoreItem from '@/components/store-item';
-import { tags } from '@/utils/data';
-import { cx } from '@/utils/misc';
-import Link from 'next/link';
-import Meta from '@/components/meta';
 
 export default function Home() {
   const [selectedTag, setSelectedTag] = useState(Object.keys(tags)[0]);

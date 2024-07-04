@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react';
 
+import Meta from './meta';
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
-import Meta from './meta';
 
 const Layout: FC<{ children: ReactNode; title: string }> = ({
   children,

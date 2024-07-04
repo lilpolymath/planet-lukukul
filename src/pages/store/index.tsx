@@ -13,10 +13,6 @@ const Tickets = () => {
     setSelectedTag(tag);
   };
 
-  console.log('selectedTag', selectedTag);
-
-  const data = () => {};
-
   return (
     <Layout title='Store'>
       <section className='store__container'>

@@ -1,5 +1,5 @@
-import Logo from '../assets/svg/logo.svg';
-import sealed_mouth from '../assets/svg/footer.svg';
+import Logo from '@/assets/svg/logo.svg';
+import sealed_mouth from '@/assets/svg/footer.svg';
 
 const Footer = () => {
   return (

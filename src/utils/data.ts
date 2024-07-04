@@ -1,27 +1,25 @@
-import handshake from '../assets/svg/handshake.svg';
-import masked_face from '../assets/svg/masked-face.svg';
-import sealed_mouth from '../assets/svg/sealed-mouth.svg';
-import playground from '../assets/svg/playground.svg';
-import collection from '../assets/svg/collection.svg';
-import gibson from '../assets/images/gibson.jpg';
-import ayonete from '../assets/images/ayonete.jpg';
-import nativemind from '../assets/images/nativemind.jpg';
-import reespect from '../assets/images/reespect.jpg';
-import favour from '../assets/images/favour.jpeg';
-import cynthia from '../assets/images/cyn.jpg';
 import merch from '../assets/svg/merch.svg';
-import metaverse from '../assets/svg/metaverse.svg';
-import ticket from '../assets/svg/ticket.svg';
-import music from '../assets/svg/music.svg';
 import phone from '../assets/svg/phone.svg';
-import collectibles from '../assets/svg/collectibles.svg';
+import music from '../assets/svg/music.svg';
+import ticket from '../assets/svg/ticket.svg';
 import launch from '../assets/svg/launch.svg';
+import handshake from '../assets/svg/handshake.svg';
+import metaverse from '../assets/svg/metaverse.svg';
+import playground from '../assets/svg/playground.svg';
+import collectibles from '../assets/svg/collectibles.svg';
 
-import one from '../assets/images/lore/1.jpeg';
+import cynthia from '../assets/images/cyn.jpg';
+import gibson from '../assets/images/gibson.jpg';
+import favour from '../assets/images/favour.jpeg';
+import ayonete from '../assets/images/ayonete.jpg';
+import reespect from '../assets/images/reespect.jpg';
+import nativemind from '../assets/images/nativemind.jpg';
+
 import two from '../assets/images/lore/2.jpg';
-import three from '../assets/images/lore/3.jpeg';
+import one from '../assets/images/lore/1.jpeg';
 import four from '../assets/images/lore/4.png';
 import five from '../assets/images/lore/5.png';
+import three from '../assets/images/lore/3.jpeg';
 
 export const chapterImages = [
   {
@@ -47,47 +45,6 @@ export const chapterImages = [
 ];
 
 export const roadmap = [
-  {
-    title: 'The Great Silence',
-    timeline: 'Q1',
-    description:
-      ' An excerpt of one of agent Reespect’s early missions, made with music, animation and storytelling.',
-    icon: sealed_mouth,
-  },
-
-  {
-    title: 'Character Introduction',
-    timeline: 'Q1',
-    description:
-      'Introduce the community to the planet’s early characters and their backstory.',
-    icon: masked_face,
-  },
-
-  {
-    title: 'Cross-Chain Collabs',
-    timeline: 'Q1',
-    description:
-      'Collaboration galore with creatives/creative communities on other blockchains.',
-    icon: handshake,
-  },
-
-  {
-    title: 'The Planet Lukukul Collection',
-    timeline: 'Q2',
-    description:
-      'Public mint of the collectibles with access to the merch, artist support and tour.',
-    icon: collection,
-  },
-
-  {
-    timeline: 'Q3',
-    title: 'The Cool Playground',
-    description: 'A new product for games and Metaverse experiences.',
-    icon: playground,
-  },
-];
-
-export const ROADMAP = [
   {
     title: 'our launch',
     description:

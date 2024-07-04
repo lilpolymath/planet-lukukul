@@ -1,4 +1,6 @@
+import { useRouter } from 'next/router';
 import { FC, useEffect, useState } from 'react';
+import { Facebook, Twitter } from 'react-feather';
 
 import mr from '@/assets/images/archetypes/mr-hoom.jpeg';
 import kate from '@/assets/images/archetypes/kate-674.jpeg';
@@ -9,12 +11,13 @@ import bouncing from '@/assets/images/archetypes/bouncing-baby-b.jpeg';
 import reddit from '@/assets/images/reddit.png';
 
 import { Archetype } from '@/utils/types';
-import { useRouter } from 'next/router';
 import { shareText } from '@/utils/misc';
-import { Facebook, Twitter } from 'react-feather';
 
 const ArchetypeResult: FC<{ archetype: Archetype }> = ({ archetype }) => {
   const [ogUrl, setOgUrl] = useState('');
+  const router = useRouter();
+  const path = router.asPath;
+
   const getArchetypeImage = (archetype: Archetype): any => {
     switch (archetype.name) {
       case 'Agent Respect':
@@ -31,10 +34,6 @@ const ArchetypeResult: FC<{ archetype: Archetype }> = ({ archetype }) => {
         return agent;
     }
   };
-
-  const router = useRouter();
-
-  const path = router.asPath;
 
   useEffect(() => {
     const host = window.location.host;

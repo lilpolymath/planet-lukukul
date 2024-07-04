@@ -1,4 +1,5 @@
-import { ROADMAP } from '@/utils/data';
+/* eslint-disable @next/next/no-img-element */
+import { roadmap } from '@/utils/data';
 
 const Roadmap = () => {
   return (
@@ -10,7 +11,7 @@ const Roadmap = () => {
       </div>
 
       <div className='roadmap'>
-        {ROADMAP.map((item, idx) => (
+        {roadmap.map((item, idx) => (
           <div className='roadmap__item' key={idx}>
             <div className='roadmap__item__image'>
               <img src={item.icon.src} alt='' />
@@ -29,3 +30,4 @@ const Roadmap = () => {
 };
 
 export default Roadmap;
+
