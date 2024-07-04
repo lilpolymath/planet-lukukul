@@ -3,7 +3,7 @@ import Layout from '@/components/layout';
 
 const Events = () => {
   return (
-    <Layout title='Events'>
+    <Layout>
       <section className='events__container'>
         <header className='section__header'>
           <h2>Get Tickets</h2>

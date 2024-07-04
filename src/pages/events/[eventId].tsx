@@ -21,7 +21,7 @@ const Event = () => {
   };
 
   return (
-    <Layout title='Event'>
+    <Layout>
       <section className='event-details__container'>
         <div className='event-details__gallery'>
           <div className='event-details__main'>

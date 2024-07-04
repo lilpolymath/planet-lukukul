@@ -17,35 +17,6 @@ import phone from '../assets/svg/phone.svg';
 import collectibles from '../assets/svg/collectibles.svg';
 import launch from '../assets/svg/launch.svg';
 
-import one from '../assets/images/lore/1.jpeg';
-import two from '../assets/images/lore/2.jpg';
-import three from '../assets/images/lore/3.jpeg';
-import four from '../assets/images/lore/4.png';
-import five from '../assets/images/lore/5.png';
-
-export const chapterImages = [
-  {
-    artist: 'jon_d',
-    url: one,
-  },
-  {
-    artist: 'ayonete',
-    url: two,
-  },
-  {
-    artist: 'chinasa',
-    url: three,
-  },
-  {
-    artist: 'auntyjjc',
-    url: four,
-  },
-  {
-    artist: '6world',
-    url: five,
-  },
-];
-
 export const roadmap = [
   {
     title: 'The Great Silence',
@@ -90,27 +61,23 @@ export const roadmap = [
 export const ROADMAP = [
   {
     title: 'our launch',
-    description:
-      'Our community and partners launch all the new features of our website.',
-    icon: launch,
+    description: 'Our community and partners launch all the new features of our website.',
+    icon: launch
   },
   {
     title: 'community access collectibles',
-    description:
-      'we list our access nfts created based on the current characters on the planet…and reward early users.',
-    icon: collectibles,
+    description: 'we list our access nfts created based on the current characters on the planet…and reward early users.',
+    icon: collectibles
   },
   {
     title: 'the cool playground',
-    description:
-      'concurrently, we launch the cool playground product. a capsule for our games and meta verse.',
-    icon: playground,
+    description: 'concurrently, we launch the cool playground product. a capsule for our games and meta verse.',
+    icon: playground
   },
   {
     title: 'tokenize the planet',
-    description:
-      'launch the planet tokens for easier trade, access and governance.',
-    icon: handshake,
+    description: 'launch the planet tokens for easier trade, access and governance.',
+    icon: handshake
   },
 ];
 
@@ -192,4 +159,3 @@ export const tags = {
   merch: 'Merch',
   nfts: 'NFTs',
 };
-
