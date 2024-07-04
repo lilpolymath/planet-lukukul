@@ -1,14 +1,20 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 
-import agent from '@/assets/images/archetypes/agent-reespect.jpeg';
-import bouncing from '@/assets/images/archetypes/bouncing-baby-b.jpeg';
-import francis from '@/assets/images/archetypes/francis-ocean.jpeg';
-import kate from '@/assets/images/archetypes/kate-674.jpeg';
 import mr from '@/assets/images/archetypes/mr-hoom.jpeg';
+import kate from '@/assets/images/archetypes/kate-674.jpeg';
+import agent from '@/assets/images/archetypes/agent-reespect.jpeg';
+import francis from '@/assets/images/archetypes/francis-ocean.jpeg';
+import bouncing from '@/assets/images/archetypes/bouncing-baby-b.jpeg';
+
+import reddit from '@/assets/images/reddit.png';
 
 import { Archetype } from '@/utils/types';
+import { useRouter } from 'next/router';
+import { shareText } from '@/utils/misc';
+import { Facebook, Twitter } from 'react-feather';
 
 const ArchetypeResult: FC<{ archetype: Archetype }> = ({ archetype }) => {
+  const [ogUrl, setOgUrl] = useState('');
   const getArchetypeImage = (archetype: Archetype): any => {
     switch (archetype.name) {
       case 'Agent Respect':
@@ -26,6 +32,17 @@ const ArchetypeResult: FC<{ archetype: Archetype }> = ({ archetype }) => {
     }
   };
 
+  const router = useRouter();
+
+  const path = router.asPath;
+
+  useEffect(() => {
+    const host = window.location.host;
+    const baseUrl = `https://${host}`;
+
+    setOgUrl(`${baseUrl}${router.pathname}`);
+  }, [path]);
+
   return (
     <>
       <div className='lore__image -show'>
@@ -36,6 +53,45 @@ const ArchetypeResult: FC<{ archetype: Archetype }> = ({ archetype }) => {
           You are {archetype.name}, {archetype.title}.
         </h2>
         <p className='lore__archetype__text'>{archetype.description}</p>
+        <div className='lore__share'>
+          <p>Share to:</p>
+
+          <div className='lore__share__icons'>
+            <a
+              href={shareText({
+                platform: 'facebook',
+                text: `I am ${archetype.name}, ${archetype.title}. What about you? `,
+                url: ogUrl,
+              })}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Facebook />
+            </a>
+            <a
+              href={shareText({
+                platform: 'twitter',
+                text: `I am ${archetype.name}, ${archetype.title}. What about you? `,
+                url: ogUrl,
+              })}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Twitter />
+            </a>
+            <a
+              href={shareText({
+                platform: 'reddit',
+                text: `I am ${archetype.name}, ${archetype.title}. What about you? `,
+                url: ogUrl,
+              })}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <img src={reddit.src} alt='' />
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );
