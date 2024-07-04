@@ -20,7 +20,7 @@
 
     img {
       height: 40px;
-      margin: 48px 0 16px;
+      margin: 56px 0 24px;
       object-fit: contain;
     }
 
@@ -68,17 +68,25 @@
 
         img {
           height: 100%;
-
           object-fit: contain;
 
           + img {
-            margin-left: -24px;
+            margin-left: -18px;
           }
         }
       }
 
+      a {
+        margin-top: 4px;
+        display: block;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
       span {
-        font-weight: 700;
+        font-weight: 600;
       }
     }
 
@@ -280,6 +288,11 @@
     gap: 40px 20px;
 
     @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 24px;
+    }
+
+    @media screen and (max-width: 500px) {
       grid-template-columns: repeat(1, 1fr);
       gap: 48px 24px;
     }
@@ -543,7 +556,8 @@
   &__preview {
     border-radius: 24px;
     height: 250px;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     position: relative;
     margin: auto;
 

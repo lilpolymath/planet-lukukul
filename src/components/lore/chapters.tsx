@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from 'next/link';
-import { useEffect, useRef, useState, useCallback } from 'react';
 import { inView, useAnimate } from 'framer-motion';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 import { Chapter } from '@/utils/types';
 import { chapterImages } from '@/utils/data';
@@ -53,7 +53,7 @@ const LoreChapters = () => {
       ];
       animate(sequence);
     }
-  }, [currentChapterIndex, animate]);
+  }, [currentChapterIndex]);
 
   const renderContent = () =>
     currentChapter.content.map((item, index) => {

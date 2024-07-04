@@ -11,8 +11,9 @@ nav {
   top: 0;
   z-index: 2;
   width: 100vw;
-  // border-bottom: 1px solid #e0e0e0;
-  background: var(--background);
+  background: transparent;
+  backdrop-filter: blur(4px);
+  backface-visibility: hidden;
 
   header {
     display: flex;

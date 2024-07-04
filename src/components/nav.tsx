@@ -19,7 +19,11 @@ const Nav = () => {
   }, [router.events]);
 
   return (
-    <nav>
+    <nav
+      style={{
+        background: isOpen ? 'var(--background)' : 'transparent',
+      }}
+    >
       <header className='container'>
         <Link href='/'>
           <img src={'/logo.svg'} alt='Planet Lukukul' />

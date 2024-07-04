@@ -1,11 +1,14 @@
-import planet from '../assets/images/saturn.png';
+/* eslint-disable @next/next/no-img-element */
+
+import Link from 'next/link';
+
 import one from '../assets/images/1.png';
 import two from '../assets/images/2.png';
-import three from '../assets/images/3.png';
+import six from '../assets/images/6.png';
 import four from '../assets/images/4.png';
 import five from '../assets/images/5.png';
-import six from '../assets/images/6.png';
-import Link from 'next/link';
+import three from '../assets/images/3.png';
+import planet from '../assets/images/saturn.png';
 
 const Hero = () => {
   return (
@@ -35,15 +38,15 @@ const Hero = () => {
                 <img src={five.src} alt='' />
                 <img src={six.src} alt='' />
               </div>
-              <p>
-                <span>218 people</span> in our community.
-              </p>
-              <p>Join us today</p>
+              <p>300 in our community.</p>
+              <a
+                href='https://discord.com/invite/C9Hesz7uUn'
+                target={'_blank'}
+                rel='noreferrer'
+              >
+                <span>Join us today</span>
+              </a>
             </div>
-
-            {/* <div className='planet'>
-              <p>An exterterrstrial experience</p>
-            </div> */}
           </div>
         </div>
       </div>
