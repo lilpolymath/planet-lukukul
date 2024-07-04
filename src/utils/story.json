@@ -1,0 +1,179 @@
+{
+  "intro": {
+    "text": "You, dear reader, found yourself drawn into the echoes of the vessel too. The winds await your decision. Choose your path wisely, for your choices will resonate through the universe and Mystura will feel your presence. You, [insert name], are also on Eden as a",
+    "choices": [
+      { "text": "Artist", "next": "artist_intro" },
+      { "text": "Comrade", "next": "comrade_intro" }
+    ]
+  },
+  "artist_intro": {
+    "text": "Your heart resonates with the echoes of Mr. Adam's legacy. You understand Mr Hoom’s rage, but you understand this is beyond him and his family heirloom. You want the vessel to be found and returned to Eden. What do you do next?",
+    "choices": [
+      {
+        "text": "Your curiosity peaks and you go find the site where the crew is building the vehicle.",
+        "next": "artist_find_site"
+      },
+      {
+        "text": "You decide to spread the word about why the ethereal vessel is important.",
+        "next": "artist_spread_word"
+      },
+      {
+        "text": "Your anger towards the leaders becomes rage and you decide to join Mr Hoom’s comrades.",
+        "next": "artist_join_comrades"
+      }
+    ]
+  },
+  "artist_find_site": {
+    "text": "The spaceship, crafted by the crew, stood before you—a motor destined to sail the currents. Do you join the quest to reclaim the stolen vessel?",
+    "choices": [
+      {
+        "text": "Yes, and I want to travel with the rest of the crew.",
+        "next": "travel_with_crew"
+      },
+      {
+        "text": "Yes, but only with building the spacecraft, I don’t think it’s important I go with them.",
+        "next": "build_spacecraft_only"
+      },
+      {
+        "text": "No, the site is so rowdy and scary, I take note of everything and go back into town.",
+        "next": "go_back_to_town"
+      }
+    ]
+  },
+  "artist_spread_word": {
+    "text": "You spend the next months spreading the gospel of the vessel, the need for peace amongst everyone. Through your art, you explain to everyone that the leaders are being influenced by fear. You stay updated on the quest and continue to wish the crew success.",
+    "choices": []
+  },
+  "artist_join_comrades": {
+    "text": "You understand Mr Hoom’s rage and approach him asking to be a comrade. Mr Hoom asks you to decide what you want to do as a comrade.",
+    "choices": [
+      {
+        "text": "Would you build the spacecraft with him?",
+        "next": "build_spacecraft_with_hoom"
+      },
+      {
+        "text": "Would you go into town to recruit more people who believe in the vessel and its magic?",
+        "next": "recruit_people"
+      }
+    ]
+  },
+  "build_spacecraft_with_hoom": {
+    "text": "Mr Hoom gives you a proud smile.",
+    "choices": [
+      {
+        "text": "Your curiosity peaks and you go find the site where the crew is building the vehicle.",
+        "next": "artist_find_site"
+      }
+    ]
+  },
+  "recruit_people": {
+    "text": "Mr Hoom gives you a proud smile.",
+    "choices": [
+      {
+        "text": "You decide to spread the word about why the ethereal vessel is important.",
+        "next": "artist_spread_word"
+      }
+    ]
+  },
+  "travel_with_crew": {
+    "text": "Awesome, they welcome you to the crew and work starts.",
+    "choices": []
+  },
+  "build_spacecraft_only": {
+    "text": "After days of working with the crew your suspicion grows. You feel like Kate 674 is part of the reason why the vessel is missing in the first place. Who do you share your suspicions with?",
+    "choices": [
+      {
+        "text": "I tell Agent Reespect, she will know what to do.",
+        "next": "tell_reespect"
+      },
+      {
+        "text": "I tell Francis Ocean, he seems like the most level-headed member of the crew.",
+        "next": "tell_francis"
+      },
+      { "text": "I confront Kate 674 directly.", "next": "confront_kate" }
+    ]
+  },
+  "go_back_to_town": {
+    "text": "You decide to spread the word about why the ethereal vessel is important.",
+    "choices": [
+      {
+        "text": "Your anger towards the leaders becomes rage and you decide to join Mr Hoom’s comrades.",
+        "next": "artist_join_comrades"
+      }
+    ]
+  },
+  "tell_reespect": {
+    "text": "She appreciates your observation and advises you not to embark on this with a crew member you don’t trust.",
+    "choices": [
+      {
+        "text": "You agree with Agent Reespect, there are other ways you can help.",
+        "next": "spread_word"
+      },
+      {
+        "text": "Her response is too laid back for you, you can’t handle this team.",
+        "next": "spread_word"
+      },
+      {
+        "text": "You listen but disagree with her, you will be on that spaceship.",
+        "next": "join_spacecraft"
+      }
+    ]
+  },
+  "tell_francis": {
+    "text": "Francis Ocean explains to you the strengths and weaknesses of everyone in the crew. He tells you that as long as you all focus on finding the vessel, all will be well. He then offers you lunch.",
+    "choices": [
+      {
+        "text": "Francis Ocean is right, you need to trust the crew.",
+        "next": "trust_crew"
+      },
+      {
+        "text": "To tell Agent Reespect, she will know what to do.",
+        "next": "tell_reespect"
+      },
+      {
+        "text": "His response is too laid back for you, you can’t handle this team.",
+        "next": "spread_word"
+      }
+    ]
+  },
+  "confront_kate": {
+    "text": "She finds a way to assign you an important role outside the site.",
+    "choices": [
+      {
+        "text": "You decide to spread the word about why the ethereal vessel is important.",
+        "next": "artist_spread_word"
+      }
+    ]
+  },
+  "spread_word": {
+    "text": "You spend the next months spreading the gospel of the vessel, the need for peace amongst everyone. Through your art, you explain to everyone that the leaders are being influenced by fear. You stay updated on the quest and continue to wish the crew success.",
+    "choices": []
+  },
+  "trust_crew": {
+    "text": "You listen but disagree with her, you will be on that spaceship.",
+    "choices": [
+      {
+        "text": "After weeks, the spacecraft is ready, you and the rest of the team start racking the vessel, fully prepared for an adventure that will lead you all to Planet Lukukul...but you don’t know that yet.",
+        "next": "adventure_start"
+      }
+    ]
+  },
+  "join_spacecraft": {
+    "text": "After weeks, the spacecraft is ready, you and the rest of the team start racking the vessel, fully prepared for an adventure that will lead you all to Planet Lukukul...but you don’t know that yet.",
+    "choices": []
+  },
+  "adventure_start": {
+    "text": "The end.",
+    "choices": []
+  },
+  "comrade_intro": {
+    "text": "Your heart resonates with the echoes of Mr. Adam's legacy.",
+    "choices": [
+      {
+        "text": "Your anger towards the leaders becomes rage and you decide to join Mr Hoom’s comrades.",
+        "next": "artist_join_comrades"
+      }
+    ]
+  }
+}
+
