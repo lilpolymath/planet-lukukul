@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
+
 import React from 'react';
 
-import eye from '../assets/images/bandana.png';
+import eye from '@/assets/images/bandana.png';
 
 const StoreItem = () => {
   return (

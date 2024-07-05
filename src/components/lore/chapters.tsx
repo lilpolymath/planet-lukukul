@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 
 import { Chapter } from '@/utils/types';
 import { chapterImages } from '@/utils/data';
-import chaptersData from '@/utils/chapters.json';
+import chaptersData from '@/lore-data/chapters.json';
 
 const LoreChapters = () => {
   const offsetRef = useRef(0);

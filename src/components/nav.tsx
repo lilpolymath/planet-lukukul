@@ -4,16 +4,13 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 const Nav = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  const router = useRouter();
 
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
-      setIsOpen(false);
-    });
-    router.events.on('routeChangeComplete', () => {
       setIsOpen(false);
     });
   }, [router.events]);

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import eye from '../assets/svg/eye.svg';
-import ticket from '../assets/svg/ticket.svg';
+import eye from '@/assets/svg/eye.svg';
+import ticket from '@/assets/svg/ticket.svg';
 
 const Event = () => {
   return (
