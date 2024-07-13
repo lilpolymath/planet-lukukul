@@ -3,16 +3,26 @@ import { useState } from 'react';
 
 import Layout from '@/components/layout';
 import Ticket from '@/assets/svg/TicketIcon';
+import { events } from '@/utils/data';
+import { slugify } from '@/utils/misc';
 
-const Event = () => {
-  const images = [
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg',
-    'image4.jpg',
-    'image5.jpg',
-    'image6.jpg',
-  ];
+export const getStaticProps = (ctx) => {
+  const data = events.filter(event => slugify(event.name) === ctx.params.eventId);
+  return {
+    props: { data: data[0] },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const paths = events.map((event) => ({ params: { eventId: slugify(event.name) } }))
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+const Event = ({ data }) => {
+
 
   const [mainImage, setMainImage] = useState(1);
 
@@ -20,19 +30,21 @@ const Event = () => {
     setMainImage(image);
   };
 
+  const shouldRenderImages = data.images && data.images.length > 2
+
   return (
     <Layout title='Event'>
       <section className='event-details__container'>
         <div className='event-details__gallery'>
           <div className='event-details__main'>
             <img
-              src={`https://picsum.photos/id/${mainImage}/600/400`}
+              src={data.image.src}
               alt='Main Ticket'
               className='main-image'
             />
           </div>
           <div className='event-details__thumbnails'>
-            {images.map((image, index) => (
+            {shouldRenderImages && data.images.map((image, index) => (
               <button
                 key={index}
                 className='thumbnail'
@@ -47,22 +59,25 @@ const Event = () => {
           </div>
         </div>
         <div className='event-details__content'>
-          <h3>Ticket name 1</h3>
+          <h3>{data.name}</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Habitant tellus nec
-            tincidunt turpis faucibus mi hendrerit egestas. Eget potenti eros
-            dolor tortor imperdiet risus. Sit ut senectus aenean venenatis leo
-            nullam at. Dictum scelerisque semper morbi massa neque aliquam
-            imperdiet molestie scelerisque. Orci nec nec nulla senectus quis.
-            Accumsan integer nisl interdum sed urna consectetur massa.
-            Scelerisque mauris pellentesque montes urna pellentesque dui. Orci
-            quis bibendum nibh faucibus phasellus sapien amet. Justo imperdiet
-            dictum tellus integer bibendum et non. Sollicitudin curabitur
-            ultrices vestibulum habitasse sit. Vel lectus etiam vestibulum
-            mattis velit massa mattis. Purus amet a sapien vitae libero interdum
-            sed pharetra ut. Lectus ultricies urna lectus facilisis egestas.
+            {data.description}
           </p>
 
+          <div className='event-details__meta'>
+            <div>
+              <h4>Time</h4>
+              <p>{data.time}</p>
+            </div>
+            <div>
+              <h4>Date</h4>
+              <p>{data.date}</p>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>{data.location}</p>
+            </div>
+          </div>
           <a
             target='_blank'
             href='https://tix.africa'
@@ -78,4 +93,3 @@ const Event = () => {
 };
 
 export default Event;
-

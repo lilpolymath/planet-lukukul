@@ -35,7 +35,7 @@ export default function Home() {
         <Hero />
       </div>
       <Roadmap />
-      <section className='store__container'>
+      <section className='store__container is-hidden'>
         <header className='section__header'>
           <h2>Our Store</h2>
           <div className='store__tags'>
@@ -63,7 +63,7 @@ export default function Home() {
           Explore store
         </Link>
       </section>
-      <Creators />
+      {/* <Creators /> */}
       <Footer />
     </>
   );

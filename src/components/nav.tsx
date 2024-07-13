@@ -29,12 +29,12 @@ const Nav = () => {
           <li>
             <Link href='/lore'>Lore</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href='/store'>Store</Link>
           </li>
           <li>
             <Link href='/events'>Archive</Link>
-          </li>
+          </li> */}
           <li>
             <Link href='/events'>Events</Link>
           </li>

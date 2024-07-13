@@ -1,27 +1,40 @@
 import Link from 'next/link';
 
+import { slugify } from '@/utils/misc';
+
 import eye from '@/assets/svg/eye.svg';
 import ticket from '@/assets/svg/ticket.svg';
 
-const Event = () => {
+type Props = {
+  name: string;
+  image: any;
+  link: string;
+  description: string;
+  tag: string;
+  location: string;
+  date: string;
+  time: string;
+}
+
+const Event = (props: Props) => {
   return (
     <div className='event__container'>
       <div className='event__image'>
-        <span className='event__tag'>workshop</span>
+        <img src={props.image.src} alt="" />
       </div>
       <div className='event__details'>
-        <h4>Event Name</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <h4>{props.name}</h4>
+        <p>{props.description}</p>
         <div className='event__actions'>
           <a
             target='_blank'
-            href='https://tix.africa'
+            href={props.link}
             className='button'
             rel='noreferrer'
           >
             get tickets <img src={ticket.src} alt='' />
           </a>
-          <Link href={'/events/3'} className='button button--accent'>
+          <Link href={`/events/${slugify(props.name)}`} className='button button--accent'>
             read more <img src={eye.src} alt='' />
           </Link>
         </div>

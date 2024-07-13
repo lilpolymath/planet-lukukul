@@ -12,16 +12,16 @@
   --background: #ffffff;
   --foreground: #241f2e;
   --accent: #ff55da;
-  --font-kc-neue-teeth: '';
+  --font-kc-neue-teeth: "";
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --background: #1a1a1a;
   --foreground: #f3f4f5;
 }
 
-[data-theme='dark'] [data-hide-on-theme='dark'],
-[data-theme='light'] [data-hide-on-theme='light'] {
+[data-theme="dark"] [data-hide-on-theme="dark"],
+[data-theme="light"] [data-hide-on-theme="light"] {
   display: none;
 }
 
@@ -109,3 +109,6 @@ h6 {
   border-width: 0;
 }
 
+.is-hidden {
+  display: none;
+}

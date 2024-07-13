@@ -1,5 +1,8 @@
-import Ticket from '@/components/event';
+import Event from '@/components/event';
 import Layout from '@/components/layout';
+import { events } from '@/utils/data';
+
+
 
 const Events = () => {
   return (
@@ -9,8 +12,8 @@ const Events = () => {
           <h2>Get Tickets</h2>
         </header>
         <div className='events__content'>
-          {Array.from({ length: 6 }, (_, i) => i).map((i) => (
-            <Ticket key={i} />
+          {events.map((event, idx) => (
+            <Event key={idx} {...event} />
           ))}
         </div>
       </section>
