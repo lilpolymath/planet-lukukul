@@ -21,7 +21,8 @@ import four from "../assets/images/lore/4.png";
 import five from "../assets/images/lore/5.png";
 import three from "../assets/images/lore/3.jpeg";
 
-import popup from "../assets/images/events/planet-lukukul.jpeg";
+import popup from "../assets/images/events/pop-up.jpeg";
+import popupThumbnail from "../assets/images/events/pop-up-thumbnail.jpeg";
 
 export const chapterImages = [
   {
@@ -156,6 +157,7 @@ export const events = [
   {
     name: "Planet Lukukul Popup",
     image: popup,
+    thumbnail: popupThumbnail,
     link: "https://tix.africa/buy/planet-lukukul-popup-780d5767-c574-46a1-a80f-6d2f8d02e8a2",
     description:
       "This pop-up event with planet lukukul and other creative partners and communities filled with art, collectibles, music and other young creatives.",
