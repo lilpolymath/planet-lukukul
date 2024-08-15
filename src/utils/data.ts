@@ -158,7 +158,7 @@ export const events = [
     name: "Planet Lukukul Popup",
     image: popup,
     thumbnail: popupThumbnail,
-    link: "https://tix.africa/buy/planet-lukukul-popup-780d5767-c574-46a1-a80f-6d2f8d02e8a2",
+    link: "https://tix.africa/discover/toplanetlu",
     description:
       "This pop-up event with planet lukukul and other creative partners and communities filled with art, collectibles, music and other young creatives.",
     tag: "popup",
