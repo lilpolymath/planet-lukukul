@@ -766,6 +766,7 @@
   &__section {
     display: flex;
     gap: 30px;
+    flex-direction: column;
 
     > * {
       width: 100%;
@@ -789,9 +790,13 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;
-    min-height: 200px;
-    max-height: 625px;
-    overflow: hidden;
+
+    p {
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
 
     &__node {
       opacity: 0;
@@ -979,18 +984,22 @@
   @extend .lore;
 
   &__outline {
-    @extend .lore__text;
+    // @extend .lore__text;
 
     padding: 32px 16px;
 
-    > div {
-      height: 100%;
-      overflow: hidden;
-      border: 0.5px solid #ffffff;
-      padding: 16px;
-      border-radius: 20px;
-      mask: linear-gradient(to bottom, #21091c 75%, #00000040 100%);
+    > * + * {
+      margin-top: 32px;
     }
+
+    // > div {
+    //   height: 100%;
+    //   overflow: hidden;
+    //   // border: 0.5px solid #ffffff;
+    //   padding: 16px;
+    //   border-radius: 20px;
+    //   // mask: linear-gradient(to bottom, #21091c 75%, #00000040 100%);
+    // }
   }
 
   &__controls {

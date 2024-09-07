@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Link from 'next/link';
-import { inView, useAnimate } from 'framer-motion';
-import { useEffect, useRef, useState, useCallback } from 'react';
+import Link from "next/link";
+import { inView, useAnimate } from "framer-motion";
+import { useEffect, useRef, useState, useCallback } from "react";
 
-import { Chapter } from '@/utils/types';
-import { chapterImages } from '@/utils/data';
-import chaptersData from '@/lore-data/chapters.json';
+import { Chapter } from "@/utils/types";
+import { chapterImages } from "@/utils/data";
+import chaptersData from "@/lore-data/chapters.json";
 
 const LoreChapters = () => {
   const offsetRef = useRef(0);
@@ -23,49 +23,55 @@ const LoreChapters = () => {
     }
   }, []);
 
-  useEffect(() => {
-    updateOffset();
+  // useEffect(() => {
+  //   updateOffset();
 
-    const handleInView = ({ target }) => {
-      const artist = target.dataset.artist;
-      const img = chapterImages.find((image) => image.artist === artist);
-      setActiveImage(img.url.src);
-    };
+  //   const handleInView = ({ target }) => {
+  //     const artist = target.dataset.artist;
+  //     const img = chapterImages.find((image) => image.artist === artist);
+  //     setActiveImage(img.url.src);
+  //   };
 
-    inView('.story__image', handleInView, {
-      margin: '0px 50px -50px 0px',
-      amount: 1,
-    });
+  //   inView('.story__image', handleInView, {
+  //     margin: '0px 50px -50px 0px',
+  //     amount: 1,
+  //   });
 
-    window.addEventListener('resize', updateOffset);
-    return () => window.removeEventListener('resize', updateOffset);
-  }, [currentChapterIndex, updateOffset]);
+  //   window.addEventListener('resize', updateOffset);
+  //   return () => window.removeEventListener('resize', updateOffset);
+  // }, [currentChapterIndex, updateOffset]);
 
-  useEffect(() => {
-    if (offsetRef.current !== 0) {
-      const sequence: any = [
-        ['.story__text', { opacity: [0, 1] }, { duration: 1 }],
-        [
-          '.story__text',
-          { y: [0, 500 - offsetRef.current] },
-          { duration: offsetRef.current / 50, delay: 0.25 },
-        ],
-      ];
-      animate(sequence);
-    }
-  }, [currentChapterIndex]);
+  // useEffect(() => {
+  //   if (offsetRef.current !== 0) {
+  //     const sequence: any = [
+  //       ['.story__text', { opacity: [0, 1] }, { duration: 1 }],
+  //       [
+  //         '.story__text',
+  //         { y: [0, 500 - offsetRef.current] },
+  //         { duration: offsetRef.current / 50, delay: 0.25 },
+  //       ],
+  //     ];
+  //     animate(sequence);
+  //   }
+  // }, [currentChapterIndex]);
 
   const renderContent = () =>
     currentChapter.content.map((item, index) => {
-      if (typeof item === 'string') {
-        return <p key={index}>{item}</p>;
-      } else if (item.type === 'illustration') {
+      if (typeof item === "string") {
+        let textArray = item;
         return (
-          <div
-            className='story__image'
-            data-artist={item.description}
-            key={index}
-          />
+          <div className="lore__text" key={index}>
+            <p>{item}</p>
+          </div>
+        );
+      } else if (item.type === "illustration") {
+        const img = chapterImages.find(
+          (image) => image.artist === item.description
+        );
+        return (
+          <div key={index} className="lore__image">
+            <img src={img.url.src} alt={img.artist} />
+          </div>
         );
       }
       return null;
@@ -75,7 +81,7 @@ const LoreChapters = () => {
     if (currentChapterIndex === 0) {
       return (
         <button
-          className='join-btn join-btn--purple'
+          className="join-btn join-btn--purple"
           onClick={() => setCurrentChapterIndex(1)}
         >
           Go to Part Two
@@ -85,12 +91,12 @@ const LoreChapters = () => {
       return (
         <>
           <button
-            className='join-btn join-btn--outline'
+            className="join-btn join-btn--outline"
             onClick={() => setCurrentChapterIndex(0)}
           >
             Go to Part One
           </button>
-          <Link className='join-btn join-btn--purple' href='/lore/archetype'>
+          <Link className="join-btn join-btn--purple" href="/lore/archetype">
             Go to Part Three
           </Link>
         </>
@@ -99,26 +105,16 @@ const LoreChapters = () => {
   };
 
   return (
-    <section className='story'>
-      <h2 className='lore__title'>{currentChapter.chapterTitle}</h2>
-      <div className='lore__section' ref={scope}>
-        <div className='lore__image'>
-          <img src={activeImage} alt='' />
-        </div>
-        <div className='lore__content'>
-          <div className='story__outline'>
-            <div>
-              <div className='story__text' ref={scrollToRef}>
-                {renderContent()}
-              </div>
-            </div>
-          </div>
+    <section className="story">
+      <h2 className="lore__title">{currentChapter.chapterTitle}</h2>
+      <div className="lore__section" ref={scope}>
+        <div className="lore__content">
+          <div className="story__outline">{renderContent()}</div>
         </div>
       </div>
-      <div className='story__controls'>{renderControls()}</div>
+      <div className="story__controls">{renderControls()}</div>
     </section>
   );
 };
 
 export default LoreChapters;
-
