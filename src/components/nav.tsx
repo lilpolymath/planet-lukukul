@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const NAV_LINKS = [
   {
     name: "Lore",
-    path: "/lore",
+    path: "/lore/part-one",
   },
   // {
   //   name: "Store",
