@@ -768,6 +768,10 @@
     gap: 30px;
     flex-direction: column;
 
+    &--results {
+      flex-direction: row;
+    }
+
     > * {
       width: 100%;
     }
@@ -784,7 +788,7 @@
   }
 
   &__text {
-    background: #21091c;
+    background: #554552;
     padding: 40px 32px;
     color: #ffffff;
     font-size: 20px;
@@ -825,6 +829,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
 
     &__node {
       background: #ffffff;
@@ -904,6 +911,11 @@
       cursor: pointer;
       display: flex;
       color: #ffffff;
+      opacity: 0;
+
+      &.-show {
+        opacity: 1;
+      }
     }
   }
 
